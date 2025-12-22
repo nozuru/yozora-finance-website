@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yozora Finance - 自分仕様の投資AIを、みんなで育てよう</title>
+    <title>Yozora Finance - 読めなかった日本株を、読めるように</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,17 +40,13 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-tagline">— 観測し、検証し、改善する</p>
-                    <h1>自分仕様の投資AIを、<br>みんなで育てよう</h1>
+                    <p class="hero-tagline">— 日本語金融データを、AIが扱える形に</p>
+                    <h1>読めなかった日本株を、<br>読めるように</h1>
                     <p class="hero-lead">
                         Yozora Financeは、学生が中心となって運営するオープンソースコミュニティです。<br>
-                        シャープレシオを指標に、日本市場に特化した投資エージェントを協力して育てます。
+                        日本語金融データの整備と、それを活用するAIエージェントの開発を通じて、<br>
+                        言語の壁を超えた日本市場へのアクセスを実現します。
                     </p>
-                    <div class="hero-meta">
-                        <span>学生主体</span>
-                        <span>オープンソース</span>
-                        <span>日本市場特化</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -62,15 +58,30 @@
                     <h2 class="section-title">Yozora Financeについて</h2>
                 </div>
 
-                <p class="about-vision">誰もが自分仕様の資産運用エージェントを開発・活用できる社会</p>
+                <p class="about-vision">読めなかった日本株を、読めるように</p>
 
                 <div class="about-content">
-                    <p>このビジョンの実現には、成果を適切に評価・比較し、継続的に改善する仕組みが欠かせません。</p>
-                    <p>現在、LLM(大規模言語モデル)やAIエージェントの評価基盤は、質疑応答や要約といったタスクに偏っており、実際の運用成績を評価する指標を用いた評価は、ほとんど整備されていません。加えて、多くの金融系ベンチマークは英語圏を対象としており、日本語や日本市場に特化したものはごくわずかです。
-                    </p>
-                    <p>こうした状況を打開するため、私たち早稲田大学の学生エンジニアチームは、日本市場向けの投資AIエージェントを開発・共有・競争できるオープンプラットフォームを開発しています。</p>
-                    <p>また、エージェントの開発・評価だけでなく、開示文書の理解や情報整理を支援する周辺ツールの開発も並行して進めています。詳しくは、<a
-                            href="#products">プロダクト</a>をご覧ください。</p>
+                    <p>近年、日本株への注目が高まる一方で、海外投資家の投資先は知名度の高い一部銘柄に偏りがちです。その背景には、日本語で書かれた開示文書や金融データへのアクセスの難しさがあります。</p>
+                    <p>私たち早稲田大学の学生エンジニアチームは、この課題に対して3つのアプローチで取り組んでいます。</p>
+                </div>
+
+                <div class="about-mission">
+                    <div class="mission-item">
+                        <h3>データ整備</h3>
+                        <p>日本語の開示文書・金融データを、LLMが理解しやすい形に加工・整備します。</p>
+                    </div>
+                    <div class="mission-item">
+                        <h3>システム開発</h3>
+                        <p>整備したデータを活用するAIエージェントを、オープンソースコミュニティで開発します。</p>
+                    </div>
+                    <div class="mission-item">
+                        <h3>アクセス民主化</h3>
+                        <p>言語の壁を超え、世界中の投資家が日本市場にアクセスできる環境を構築します。</p>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p>詳しくは、<a href="#products">プロダクト</a>をご覧ください。</p>
                 </div>
             </div>
         </section>
@@ -88,7 +99,7 @@
                             <h3 class="product-name">モモンガナビ</h3>
                             <span class="product-status active">公開中</span>
                         </div>
-                        <p class="product-tagline">開示文書に特化した、根拠を持つAIツール</p>
+                        <p class="product-tagline">開示の森を、狙った情報へ一直線</p>
 
                         <p class="product-desc">
                             有価証券報告書や決算短信を読み解く際に、テキストを選択してその場でAIに質問ができます。回答には本文の一部が根拠として示され、前バージョンとの差分もAIが自動で要約します。</p>
@@ -273,7 +284,7 @@
             });
         }, observerOptions);
 
-        const animatedElements = document.querySelectorAll('.section-header, .about-vision, .about-content, .product-block, .community-content, .activity-item, .zenn-card, .faq-list, .contact-content');
+        const animatedElements = document.querySelectorAll('.section-header, .about-vision, .about-content, .about-mission, .mission-item, .product-block, .community-content, .activity-item, .zenn-card, .faq-list, .contact-content');
 
         animatedElements.forEach((el, index) => {
             el.classList.add('fade-in-section');

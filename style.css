@@ -213,33 +213,6 @@ nav a:hover::after {
     line-height: 1.8;
 }
 
-.hero-meta {
-    display: flex;
-    gap: 3rem;
-    border-top: 1px solid var(--border-on-dark);
-    padding-top: 2rem;
-    margin-top: 2rem;
-}
-
-.hero-meta span {
-    color: var(--text-on-dark);
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.hero-meta span::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--brand-accent-light);
-    border-radius: 50%;
-}
-
 /* Sections Global */
 section {
     padding: 120px 0;
@@ -298,6 +271,35 @@ section {
 
 .about-content a:hover {
     border-bottom-color: var(--brand-accent);
+}
+
+.about-mission {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.mission-item {
+    background: var(--bg-surface-alt);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.mission-item h3 {
+    font-size: 1.25rem;
+    color: var(--brand-accent);
+    margin-bottom: 1rem;
+}
+
+.mission-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.7;
 }
 
 /* Products Section */
@@ -627,6 +629,10 @@ footer {
     }
 
     .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-mission {
         grid-template-columns: 1fr;
     }
 }
