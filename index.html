@@ -25,9 +25,9 @@
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#activity">Activity</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#community">Community</a></li>
-                        <li><a href="#activity">Activity</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -43,9 +43,8 @@
                     <p class="hero-tagline">— 日本語金融データを、AIが扱える形に</p>
                     <h1>読めなかった日本株を、<br>読めるように</h1>
                     <p class="hero-lead">
-                        Yozora Financeは、学生が中心となって運営するオープンソースコミュニティです。<br>
-                        日本語金融データの整備と、それを活用するAIエージェントの開発を通じて、<br>
-                        言語の壁を超えた日本市場へのアクセスを実現します。
+                        日本語金融データをLLMが扱える形に整備し、<br>
+                        言語の壁を超えて日本市場へのアクセスを開きます。
                     </p>
                 </div>
             </div>
@@ -57,8 +56,6 @@
                     <p class="section-label">About</p>
                     <h2 class="section-title">Yozora Financeについて</h2>
                 </div>
-
-                <p class="about-vision">読めなかった日本株を、読めるように</p>
 
                 <div class="about-content">
                     <p>近年、日本株への注目が高まる一方で、海外投資家の投資先は知名度の高い一部銘柄に偏りがちです。その背景には、日本語で書かれた開示文書や金融データへのアクセスの難しさがあります。</p>
@@ -80,8 +77,47 @@
                     </div>
                 </div>
 
-                <div class="about-content">
-                    <p>詳しくは、<a href="#products">プロダクト</a>をご覧ください。</p>
+            </div>
+        </section>
+
+        <section class="activity" id="activity">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Activity</p>
+                    <h2 class="section-title">活動実績・開発記録</h2>
+                </div>
+
+                <div class="activity-grid">
+                    <div class="activity-item">
+                        <h3>活動実績</h3>
+                        <p>2025年8月、東京証券取引所・東証ホールにて開催されたStudent Investment Conference 2025にて、投資AIエージェントの開発・運用体験企画を実施しました。
+                        </p>
+                        <p>参加者は自然言語による投資方針から、財務健全性や価格動向などの定量指標までを含む独自のプロンプトを設計し、AIによる投資結果を比較・議論しました。</p>
+                        <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
+                            target="_blank" rel="noopener noreferrer" class="product-link">日経COMPASSの記事を見る</a>
+                    </div>
+                    <div class="activity-item">
+                        <h3>開発記録</h3>
+                        <p>プロダクト開発やプロジェクトの過程を開発記録としてZennにまとめています。</p>
+                        <div class="zenn-cards">
+                            <div class="zenn-card">
+                                <h4>決算短信の差分要約</h4>
+                                <p>旧版・新版の決算短信 PDF/XBRL ZIP を突き合わせ、セクション/文単位の差分取得と2段階要約を行います。</p>
+                                <div class="zenn-card-links">
+                                    <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">GitHub</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">記事1</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser"
+                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事2</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner"
+                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事3</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">記事4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,48 +187,6 @@
                     <p>私たちは学生が中心となって運営するオープンソースコミュニティとして、金融とテクノロジーの融合領域で学び、創造し、成長することを目指しています。経験レベルを問わず、熱意のある学生たちが集まって切磋琢磨しています。
                     </p>
                     <p class="community-note">大学生・高校生の参加を歓迎。MITライセンスでオープンに開発。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="activity" id="activity">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-label">Activity</p>
-                    <h2 class="section-title">活動実績・開発記録</h2>
-                </div>
-
-                <div class="activity-grid">
-                    <div class="activity-item">
-                        <h3>活動実績</h3>
-                        <p>2025年8月、東京証券取引所・東証ホールにて開催されたStudent Investment Conference 2025にて、投資AIエージェントの開発・運用体験企画を実施しました。
-                        </p>
-                        <p>参加者は自然言語による投資方針から、財務健全性や価格動向などの定量指標までを含む独自のプロンプトを設計し、AIによる投資結果を比較・議論しました。</p>
-                        <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
-                            target="_blank" rel="noopener noreferrer" class="product-link">日経COMPASSの記事を見る</a>
-                    </div>
-                    <div class="activity-item">
-                        <h3>開発記録</h3>
-                        <p>プロダクト開発やプロジェクトの過程を開発記録としてZennにまとめています。</p>
-                        <div class="zenn-cards">
-                            <div class="zenn-card">
-                                <h4>決算短信の差分要約</h4>
-                                <p>旧版・新版の決算短信 PDF/XBRL ZIP を突き合わせ、セクション/文単位の差分取得と2段階要約を行います。</p>
-                                <div class="zenn-card-links">
-                                    <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">GitHub</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">記事1</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser"
-                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事2</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner"
-                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事3</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">記事4</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
