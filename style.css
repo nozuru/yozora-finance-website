@@ -1,40 +1,47 @@
 :root {
     /* Base Colors - Corporate & Trustworthy */
     --bg-body: #f8fafc;
+    /* Crisp white-gray */
     --bg-surface: #ffffff;
     --bg-surface-alt: #f1f5f9;
 
-    /* Text Colors */
+    /* Text Colors - High Contrast & Sharp */
     --text-primary: #0f172a;
     /* Slate 900 */
-    --text-secondary: #475569;
-    /* Slate 600 */
+    --text-secondary: #334155;
+    /* Slate 700 - Slightly darker for readability */
     --text-tertiary: #64748b;
     /* Slate 500 */
 
-    /* Brand Colors - Deep & Refined */
-    --brand-primary: #1e293b;
-    /* Slate 800 - The "Yozora" night color */
-    --brand-accent: #4338ca;
-    /* Indigo 700 - Professional Accent */
-    --brand-accent-light: #6366f1;
-    /* Indigo 500 - Hover states */
+    /* Brand Colors - Deep & Refined (Trustworthy) */
+    --brand-primary: #020617;
+    /* Very Dark Navy */
+    --brand-accent: #0f52ba;
+    /* Sapphire Blue - Professional & Calm */
+    --brand-accent-light: #3b82f6;
+    /* Blue 500 - Clear & Modern */
 
     /* Functional Colors */
     --border-color: #e2e8f0;
-    --border-hover: #cbd5e1;
+    --border-hover: #94a3b8;
 
-    /* Dark Theme (Used for specific sections like Hero/Footer) */
-    --bg-dark: #0f172a;
+    /* Dark Theme */
+    --bg-dark: #0b1120;
+    /* Deepest Navy */
     --text-on-dark: #f8fafc;
-    --text-on-dark-secondary: #94a3b8;
-    --border-on-dark: #334155;
+    --text-on-dark-secondary: #cbd5e1;
+    --border-on-dark: #1e293b;
 
-    /* Shadows - Soft & Modern */
+    /* Shadows - Sophisticated & Sharp */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+    /* Layout & Shape */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
 
     /* Typography */
     --font-heading: 'Cormorant Garamond', serif;
@@ -134,11 +141,12 @@ nav ul {
 }
 
 nav a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-secondary);
     position: relative;
     padding-bottom: 0.25rem;
+    letter-spacing: 0.02em;
 }
 
 nav a:hover {
@@ -151,7 +159,8 @@ nav a::after {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
+    /* Thinner line */
     background-color: var(--brand-accent);
     transition: width 0.3s ease;
 }
@@ -170,6 +179,7 @@ nav a:hover::after {
 }
 
 /* Subtle graphic element for hero */
+/* Subtle graphic element for hero */
 .hero::after {
     content: '';
     position: absolute;
@@ -177,7 +187,8 @@ nav a:hover::after {
     right: -20%;
     width: 80%;
     height: 200%;
-    background: radial-gradient(circle, rgba(67, 56, 202, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    /* More sophisticated, deeper gradient */
+    background: radial-gradient(circle, rgba(15, 82, 186, 0.12) 0%, rgba(11, 17, 32, 0) 65%);
     z-index: 1;
     pointer-events: none;
 }
@@ -225,12 +236,13 @@ section {
 
 .section-label {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--bg-surface-alt);
-    border-radius: 99px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    padding: 0.4rem 1.2rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--brand-accent);
     margin-bottom: 1.5rem;
@@ -282,11 +294,12 @@ section {
 }
 
 .mission-item {
-    background: var(--bg-surface-alt);
-    padding: 2rem;
-    border-radius: 8px;
+    background: var(--bg-surface);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     text-align: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .mission-item h3 {
@@ -318,11 +331,11 @@ section {
 .product-block {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     padding: 3.5rem;
     margin-bottom: 2rem;
     box-shadow: var(--shadow-card);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
@@ -345,10 +358,10 @@ section {
 }
 
 .product-status {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
     border: 1px solid var(--border-color);
-    border-radius: 99px;
+    border-radius: var(--radius-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -378,13 +391,14 @@ section {
 .product-link {
     display: inline-block;
     margin-top: 1rem;
-    padding: 1rem 2.5rem;
+    padding: 0.9rem 2rem;
     background-color: var(--brand-primary);
     color: #fff;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    letter-spacing: 0.02em;
 }
 
 .product-link:hover {
@@ -395,7 +409,9 @@ section {
 .product-features {
     background: var(--bg-surface-alt);
     padding: 2.5rem;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    /* Prepare for hover borders if needed */
     display: grid;
     gap: 2rem;
 }
@@ -430,11 +446,12 @@ section {
     display: inline-block;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    border: 1px solid var(--brand-accent-light);
-    color: var(--brand-accent);
-    background: rgba(99, 102, 241, 0.05);
-    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .activity {
@@ -450,8 +467,9 @@ section {
 .activity-item {
     background: var(--bg-surface);
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .activity-item h3 {
@@ -468,9 +486,9 @@ section {
 }
 
 .zenn-card {
-    background: var(--bg-surface-alt);
+    background: var(--bg-surface);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
 }
 
@@ -498,8 +516,8 @@ section {
     font-weight: 600;
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
-    border: 1px solid var(--brand-accent);
-    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
     transition: all 0.2s ease;
 }
 
@@ -634,5 +652,27 @@ footer {
 
     .about-mission {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Animations - Sophisticated & Subtle */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
