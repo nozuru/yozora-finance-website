@@ -2,7 +2,7 @@
 
 ## mainブランチ　
 -本番公開用  
--[cloudflareでmainブランチをデプロイ中](https://)  
+-[cloudflareでmainブランチをデプロイ中](https://yozorafinance.com)  
 -**動作確認済みの安定版のみ**をマージしてください  
 
 ## devブランチ　 
