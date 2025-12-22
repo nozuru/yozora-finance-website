@@ -22,6 +22,11 @@
                 <a href="#" class="logo">
                     <img src="yozora-finance.JPG" alt="Yozora Finance">
                 </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
@@ -239,6 +244,27 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                nav.classList.toggle('active');
+                document.body.classList.toggle('no-scroll');
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    nav.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                });
+            });
+        }
+
         // スムーズスクロール
         document.querySelectorAll('a[href^="#"]:not(.zenn-card)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -252,9 +278,13 @@
                 } else {
                     const target = document.querySelector(href);
                     if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 }
@@ -281,6 +311,7 @@
 
         animatedElements.forEach((el, index) => {
             el.classList.add('fade-in-section');
+            // Zenn cards stagged delay
             if (el.classList.contains('zenn-card')) {
                 el.style.transitionDelay = `${(index % 3) * 0.1}s`;
             }
