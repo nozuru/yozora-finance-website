@@ -273,11 +273,11 @@
             });
         }, observerOptions);
 
-        const animatedElements = document.querySelectorAll('.section-header, .about-vision, .about-content, .problem-item, .product-block, .community-content, .activity-item, .zenn-card, .faq-list, .contact-content');
+        const animatedElements = document.querySelectorAll('.section-header, .about-vision, .about-content, .product-block, .community-content, .activity-item, .zenn-card, .faq-list, .contact-content');
 
         animatedElements.forEach((el, index) => {
             el.classList.add('fade-in-section');
-            if (el.classList.contains('problem-item') || el.classList.contains('zenn-card')) {
+            if (el.classList.contains('zenn-card')) {
                 el.style.transitionDelay = `${(index % 3) * 0.1}s`;
             }
             observer.observe(el);

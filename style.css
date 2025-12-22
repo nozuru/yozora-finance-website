@@ -120,7 +120,11 @@ header {
     height: 40px;
     width: auto;
     mix-blend-mode: multiply;
-    /* Ensure white background of JPG blends if needed */
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover img {
+    opacity: 0.7;
 }
 
 nav ul {
@@ -296,62 +300,6 @@ section {
     border-bottom-color: var(--brand-accent);
 }
 
-/* Problems Section - Dark Corporate Style */
-.problems {
-    background-color: var(--bg-dark);
-    color: var(--text-on-dark);
-}
-
-.problems .section-label {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--brand-accent-light);
-}
-
-.problems .section-title {
-    color: var(--text-on-dark);
-}
-
-.problem-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.problem-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-on-dark);
-    padding: 3rem;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.problem-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.problem-item h3 {
-    color: var(--text-on-dark);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.problem-item h3::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--brand-accent-light);
-}
-
-.problem-item p {
-    color: var(--text-on-dark-secondary);
-    margin: 0;
-}
-
 /* Products Section */
 .products {
     background-color: var(--bg-body);
@@ -379,9 +327,6 @@ section {
     align-items: start;
 }
 
-.product-block:hover {
-    box-shadow: var(--shadow-lg);
-}
 
 
 
@@ -524,21 +469,41 @@ section {
     background: var(--bg-surface-alt);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
 }
 
-.zenn-card:hover {
-    border-color: var(--brand-accent-light);
-    background: #fff;
-    box-shadow: var(--shadow-sm);
+.zenn-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.zenn-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.zenn-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .zenn-link {
+    display: inline-block;
     color: var(--brand-accent);
     font-weight: 600;
-    font-size: 0.9rem;
-    margin-right: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--brand-accent);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.zenn-link:hover {
+    background-color: var(--brand-accent);
+    color: #fff;
 }
 
 /* FAQ & Contact */
@@ -563,6 +528,11 @@ summary {
     position: relative;
     padding-right: 2rem;
     color: var(--brand-primary);
+    transition: color 0.2s ease;
+}
+
+summary:hover {
+    color: var(--brand-accent);
 }
 
 summary::-webkit-details-marker {
@@ -606,6 +576,12 @@ details p {
     color: var(--text-on-dark);
     border-bottom: 1px solid var(--border-on-dark);
     padding-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.contact-email:hover {
+    color: var(--brand-accent-light);
+    border-bottom-color: var(--brand-accent-light);
 }
 
 /* Footer */
