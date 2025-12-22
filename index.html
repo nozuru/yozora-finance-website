@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="night-bg"></div>
+    <!-- Background removed for cleaner style -->
 
     <header>
         <div class="container">
@@ -66,9 +66,11 @@
 
                 <div class="about-content">
                     <p>このビジョンの実現には、成果を適切に評価・比較し、継続的に改善する仕組みが欠かせません。</p>
-                    <p>現在、LLM(大規模言語モデル)やAIエージェントの評価基盤は、質疑応答や要約といったタスクに偏っており、実際の運用成績を評価する指標を用いた評価は、ほとんど整備されていません。加えて、多くの金融系ベンチマークは英語圏を対象としており、日本語や日本市場に特化したものはごくわずかです。</p>
+                    <p>現在、LLM(大規模言語モデル)やAIエージェントの評価基盤は、質疑応答や要約といったタスクに偏っており、実際の運用成績を評価する指標を用いた評価は、ほとんど整備されていません。加えて、多くの金融系ベンチマークは英語圏を対象としており、日本語や日本市場に特化したものはごくわずかです。
+                    </p>
                     <p>こうした状況を打開するため、私たち早稲田大学の学生エンジニアチームは、日本市場向けの投資AIエージェントを開発・共有・競争できるオープンプラットフォームを開発しています。</p>
-                    <p>また、エージェントの開発・評価だけでなく、開示文書の理解や情報整理を支援する周辺ツールの開発も並行して進めています。詳しくは、<a href="#products">プロダクト</a>をご覧ください。</p>
+                    <p>また、エージェントの開発・評価だけでなく、開示文書の理解や情報整理を支援する周辺ツールの開発も並行して進めています。詳しくは、<a
+                            href="#products">プロダクト</a>をご覧ください。</p>
                 </div>
             </div>
         </section>
@@ -103,26 +105,33 @@
                 <p class="products-intro">投資AIを「作る・評価する」だけでなく、その前提となる「情報を集める」行為も含めて支援しています。</p>
 
                 <div class="product-block">
-                    <div class="product-header">
-                        <h3 class="product-name">モモンガナビ</h3>
-                        <span class="product-status active">公開中</span>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3 class="product-name">モモンガナビ</h3>
+                            <span class="product-status active">公開中</span>
+                        </div>
+                        <p class="product-tagline">開示文書に特化した、根拠を持つAIツール</p>
+
+                        <p class="product-desc">
+                            有価証券報告書や決算短信を読み解く際に、テキストを選択してその場でAIに質問ができます。回答には本文の一部が根拠として示され、前バージョンとの差分もAIが自動で要約します。</p>
+                        <p class="product-desc">今後は、日本市場の情報を海外の投資家にも届けられるツールへと広げていく予定です。</p>
+
+                        <a href="http://momonga.yozorafinance.com/" class="product-link" target="_blank"
+                            rel="noopener noreferrer">モモンガナビを試す</a>
                     </div>
-                    <p class="product-tagline">開示文書に特化した、根拠を持つAIツール</p>
-
-                    <p class="product-desc">有価証券報告書や決算短信を読み解く際に、テキストを選択してその場でAIに質問ができます。回答には本文の一部が根拠として示され、前バージョンとの差分もAIが自動で要約します。</p>
-                    <p class="product-desc">今後は、日本市場の情報を海外の投資家にも届けられるツールへと広げていく予定です。</p>
-
-                    <a href="http://momonga.yozorafinance.com/" class="product-link" target="_blank" rel="noopener noreferrer">モモンガナビを試す</a>
                 </div>
 
                 <div class="product-block">
-                    <div class="product-header">
-                        <h3 class="product-name">Yozora Arena</h3>
-                        <span class="product-status">開発中</span>
-                    </div>
-                    <p class="product-tagline">投資AIエージェントの評価プラットフォーム</p>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3 class="product-name">Yozora Arena</h3>
+                            <span class="product-status">開発中</span>
+                        </div>
+                        <p class="product-tagline">投資AIエージェントの評価プラットフォーム</p>
 
-                    <p class="product-desc">シャープレシオや最大ドローダウン、推論コストなど複数の観点から、エージェントの実運用性能を公平に評価・ランキング化します。Look-ahead Biasを防ぐ仕組みや、統計的な有意性を考慮した比較手法を導入しており、信頼性の高い評価が可能です。</p>
+                        <p class="product-desc">シャープレシオや最大ドローダウン、推論コストなど複数の観点から、エージェントの実運用性能を公平に評価・ランキング化します。Look-ahead
+                            Biasを防ぐ仕組みや、統計的な有意性を考慮した比較手法を導入しており、信頼性の高い評価が可能です。</p>
+                    </div>
 
                     <div class="product-features">
                         <div class="feature-item">
@@ -150,7 +159,8 @@
                 </div>
 
                 <div class="community-content">
-                    <p>私たちは学生が中心となって運営するオープンソースコミュニティとして、金融とテクノロジーの融合領域で学び、創造し、成長することを目指しています。経験レベルを問わず、熱意のある学生たちが集まって切磋琢磨しています。</p>
+                    <p>私たちは学生が中心となって運営するオープンソースコミュニティとして、金融とテクノロジーの融合領域で学び、創造し、成長することを目指しています。経験レベルを問わず、熱意のある学生たちが集まって切磋琢磨しています。
+                    </p>
                     <p class="community-note">大学生・高校生の参加を歓迎。MITライセンスでオープンに開発。</p>
                 </div>
             </div>
@@ -166,9 +176,11 @@
                 <div class="activity-grid">
                     <div class="activity-item">
                         <h3>活動実績</h3>
-                        <p>2025年8月、東京証券取引所・東証ホールにて開催されたStudent Investment Conference 2025にて、投資AIエージェントの開発・運用体験企画を実施しました。</p>
+                        <p>2025年8月、東京証券取引所・東証ホールにて開催されたStudent Investment Conference 2025にて、投資AIエージェントの開発・運用体験企画を実施しました。
+                        </p>
                         <p>参加者は自然言語による投資方針から、財務健全性や価格動向などの定量指標までを含む独自のプロンプトを設計し、AIによる投資結果を比較・議論しました。</p>
-                        <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article" target="_blank" rel="noopener noreferrer" class="product-link">日経COMPASSの記事を見る</a>
+                        <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
+                            target="_blank" rel="noopener noreferrer" class="product-link">日経COMPASSの記事を見る</a>
                     </div>
                     <div class="activity-item">
                         <h3>開発記録</h3>
@@ -178,11 +190,16 @@
                                 <h4>決算短信の差分要約</h4>
                                 <p>旧版・新版の決算短信 PDF/XBRL ZIP を突き合わせ、セクション/文単位の差分取得と2段階要約を行います。</p>
                                 <div class="zenn-card-links">
-                                    <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank" rel="noopener noreferrer" class="zenn-link">GitHub</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank" rel="noopener noreferrer" class="zenn-link">記事1</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser" target="_blank" rel="noopener noreferrer" class="zenn-link">記事2</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner" target="_blank" rel="noopener noreferrer" class="zenn-link">記事3</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank" rel="noopener noreferrer" class="zenn-link">記事4</a>
+                                    <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">GitHub</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">記事1</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser"
+                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事2</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner"
+                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事3</a>
+                                    <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
+                                        rel="noopener noreferrer" class="zenn-link">記事4</a>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +218,8 @@
                 <div class="faq-list">
                     <details>
                         <summary>金融知識がなくても参加できますか?</summary>
-                        <p>はい、問題ありません。金融初心者からプログラミング初心者まで、様々なバックグラウンドのメンバーがいます。基礎的な学習リソースやメンタリング制度も充実しており、段階的にスキルアップできる環境を整えています。</p>
+                        <p>はい、問題ありません。金融初心者からプログラミング初心者まで、様々なバックグラウンドのメンバーがいます。基礎的な学習リソースやメンタリング制度も充実しており、段階的にスキルアップできる環境を整えています。
+                        </p>
                     </details>
                     <details>
                         <summary>ライセンスは何ですか?</summary>
