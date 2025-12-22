@@ -679,74 +679,74 @@ footer {
 }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
 
-.mobile-menu-btn {
-    display: block;
-}
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 100px 2rem 2rem;
+        transition: right 0.3s ease;
+        display: block;
+        /* Override display: none from previous media query if any */
+    }
 
-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
-    padding: 100px 2rem 2rem;
-    transition: right 0.3s ease;
-    display: block;
-    /* Override display: none from previous media query if any */
-}
+    nav.active {
+        right: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
 
-nav.active {
-    right: 0;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-}
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 
-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+    nav a {
+        font-size: 1.25rem;
+    }
 
-nav a {
-    font-size: 1.25rem;
-}
+    section {
+        padding: 80px 0;
+    }
 
-section {
-    padding: 80px 0;
-}
+    .hero {
+        padding: 140px 0 100px;
+    }
 
-.hero {
-    padding: 140px 0 100px;
-}
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
+    .product-block {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 2rem;
+    }
 
-.product-block {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-    gap: 2rem;
-}
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
 
-.activity-grid {
-    grid-template-columns: 1fr;
-}
+    .about-vision {
+        font-size: 1.5rem;
+    }
 
-.about-vision {
-    font-size: 1.5rem;
-}
+    .about-mission {
+        grid-template-columns: 1fr;
+    }
 
-.about-mission {
-    grid-template-columns: 1fr;
-}
-
-.footer-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-}
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
 }
 
 /* Animations - Sophisticated & Subtle */
