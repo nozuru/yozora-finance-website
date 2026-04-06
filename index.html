@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
@@ -36,8 +36,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#activity">Activity</a></li>
                         <li><a href="#products">Products</a></li>
-                        <li><a href="#community">Community</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -49,11 +48,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-tagline">— 日本語金融データを、AIが扱える形に</p>
-                    <h1>読めなかった日本株を、<br>読めるように</h1>
+                    <h1>AIエージェントに一次情報を届ける<br>金融データ基盤</h1>
                     <p class="hero-lead">
-                        日本語金融データをLLMが扱える形に整備し、<br>
-                        言語の壁を超えて日本市場へのアクセスを開きます。
+                        約3,800社の開示文書に加え、マクロ統計や規制当局の決定など投資判断に有用な一次情報を毎日自動収集・構造化。AIエージェントが直接アクセスできる環境を提供します。
                     </p>
                 </div>
             </div>
@@ -67,19 +64,8 @@
                 </div>
 
                 <div class="about-content">
-                    <p>近年、日本株への注目が高まる一方で、海外投資家の投資先は知名度の高い一部銘柄に偏りがちです。その背景には、日本語で書かれた開示文書や金融データへのアクセスの難しさがあります。</p>
-                    <p>私たち早稲田大学の学生エンジニアチームは、この課題に対して2つのアプローチで取り組んでいます。</p>
-                </div>
-
-                <div class="about-mission">
-                    <div class="mission-item">
-                        <h3>データ整備</h3>
-                        <p>日本語の開示文書・金融データを、LLMが理解しやすい形に加工・整備します。</p>
-                    </div>
-                    <div class="mission-item">
-                        <h3>システム開発</h3>
-                        <p>整備したデータを活用するAIエージェントを、オープンソースコミュニティで開発します。</p>
-                    </div>
+                    <p>Web上では1つの一次情報に対して数十〜数百の派生コンテンツが存在し、LLMの普及でその増殖はさらに加速しています。AIエージェントが信頼できる投資判断を行うには、原典への直接アクセスが不可欠です。</p>
+                    <p>Yozora Financeは、有報・決算短信などの開示文書を構造化しベクトル検索基盤を構築することで、AIエージェントと一次情報の距離を縮めます。</p>
                 </div>
 
             </div>
@@ -137,82 +123,41 @@
                 <div class="product-block">
                     <div class="product-info">
                         <div class="product-header">
-                            <h3 class="product-name">モモンガナビ</h3>
-                            <span class="product-status active">公開中</span>
+                            <h3 class="product-name">Momonga DB</h3>
+                            <span class="product-status">準備中</span>
                         </div>
-                        <p class="product-tagline">開示の森を、狙った情報へ一直線</p>
+                        <p class="product-tagline">AIエージェントに一次情報を届ける金融データ基盤</p>
 
                         <p class="product-desc">
-                            有価証券報告書や決算短信を読み解く際に、テキストを選択してその場でAIに質問ができます。回答には本文の一部が根拠として示され、前バージョンとの差分もAIが自動で要約します。</p>
-                        <p class="product-desc">今後は、日本市場の情報を海外の投資家にも届けられるツールへと広げていく予定です。</p>
-
-                        <a href="http://momonga.yozorafinance.com/" class="product-link" target="_blank"
-                            rel="noopener noreferrer">モモンガナビを試す</a>
-                    </div>
-                </div>
-
-                <div class="product-block">
-                    <div class="product-info">
-                        <div class="product-header">
-                            <h3 class="product-name">Yozora Arena</h3>
-                            <span class="product-status">開発中</span>
-                        </div>
-                        <p class="product-tagline">投資AIエージェントの評価プラットフォーム</p>
-
-                        <p class="product-desc">シャープレシオや最大ドローダウン、推論コストなど複数の観点から、エージェントの実運用性能を公平に評価・ランキング化します。Look-ahead
-                            Biasを防ぐ仕組みや、統計的な有意性を考慮した比較手法を導入しており、信頼性の高い評価が可能です。</p>
+                            一次情報だけを収集・構造化し、ChatGPTやClaude等のAIエージェントにとって利用しやすい形で提供する日本株データベースです。EDINET（有価証券報告書）、TDNet（決算短信・適時開示）などから約3,800社の開示文書を毎日自動収集しています。</p>
                     </div>
 
                     <div class="product-features">
                         <div class="feature-item">
-                            <h4>公平なベンチマーク</h4>
-                            <p>日本市場データに基づく統一された評価指標</p>
+                            <h4>PDF → Markdown変換</h4>
+                            <p>開示文書をVLMでMarkdownに変換。PDFと比べてトークン消費を1.5〜5分の1に削減</p>
                         </div>
                         <div class="feature-item">
-                            <h4>オープンソース</h4>
-                            <p>MITライセンスで自由に共有・改良・学習</p>
+                            <h4>チャンク分割・構造化</h4>
+                            <p>意味のまとまりで分割し、階層構造の保持と目次を作成。AIエージェント向けメタデータも付与</p>
                         </div>
                         <div class="feature-item">
-                            <h4>定期コンペ</h4>
-                            <p>投資パフォーマンスを競う定期的なコンペティション</p>
+                            <h4>ベクトル検索</h4>
+                            <p>キーワード検索と意味検索を組み合わせたハイブリッド検索。数十万件でも0.1〜0.3秒で結果を返却</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>差分検出</h4>
+                            <p>同種の文書について前四半期や前年同期と比較し、変更箇所を自動抽出</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>重複排除</h4>
+                            <p>同一の出来事について述べた複数の文書を判定し、1つにまとめて情報の重複を排除</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>MCP対応API</h4>
+                            <p>月額課金のAPI。ChatGPTやClaude Code等に手軽に導入可能</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="community" id="community">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-label">Community</p>
-                    <h2 class="section-title">学生主体コミュニティ</h2>
-                </div>
-
-                <div class="community-content">
-                    <p>私たちは学生が中心となって運営するオープンソースコミュニティとして、金融とテクノロジーの融合領域で学び、創造し、成長することを目指しています。経験レベルを問わず、熱意のある学生たちが集まって切磋琢磨しています。
-                    </p>
-                    <p class="community-note">大学生・高校生の参加を歓迎。MITライセンスでオープンに開発。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq" id="faq">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-label">FAQ</p>
-                    <h2 class="section-title">よくある質問</h2>
-                </div>
-
-                <div class="faq-list">
-                    <details>
-                        <summary>金融知識がなくても参加できますか?</summary>
-                        <p>はい、問題ありません。金融初心者からプログラミング初心者まで、様々なバックグラウンドのメンバーがいます。基礎的な学習リソースやメンタリング制度も充実しており、段階的にスキルアップできる環境を整えています。
-                        </p>
-                    </details>
-                    <details>
-                        <summary>ライセンスは何ですか?</summary>
-                        <p>MITライセンスを採用しています。コードの自由な利用、修正、配布が可能で、商用利用も含めて幅広い用途でプロジェクトを活用していただけます。</p>
-                    </details>
                 </div>
             </div>
         </section>
@@ -225,7 +170,6 @@
                 </div>
 
                 <div class="contact-content">
-                    <p>Yozora Financeや各プロダクトについてのご質問、ご相談などがあれば、こちらまでご連絡ください。</p>
                     <a href="mailto:info@yozorafinance.com" class="contact-email">info@yozorafinance.com</a>
                 </div>
             </div>
@@ -235,7 +179,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div>© 2025 Yozora Finance</div>
+                <div>© 2026 Yozora Finance</div>
                 <div class="footer-links">
                     <span>X 準備中</span>
                 </div>
@@ -244,6 +188,12 @@
     </footer>
 
     <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        }, { passive: true });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('nav');
@@ -255,7 +205,6 @@
                 document.body.classList.toggle('no-scroll');
             });
 
-            // Close menu when clicking a link
             document.querySelectorAll('nav a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenuBtn.classList.remove('active');
@@ -265,56 +214,44 @@
             });
         }
 
-        // スムーズスクロール
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]:not(.zenn-card)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const href = this.getAttribute('href');
                 if (href === '#') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                     const target = document.querySelector(href);
                     if (target) {
-                        const headerOffset = 80;
-                        const elementPosition = target.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                        const offset = target.getBoundingClientRect().top + window.pageYOffset - 72;
+                        window.scrollTo({ top: offset, behavior: 'smooth' });
                     }
                 }
             });
         });
 
         // Scroll Animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+                    obs.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { rootMargin: '0px', threshold: 0.1 });
 
-        const animatedElements = document.querySelectorAll('.section-header, .about-vision, .about-content, .about-mission, .mission-item, .product-block, .community-content, .activity-item, .zenn-card, .faq-list, .contact-content');
-
-        animatedElements.forEach((el, index) => {
+        document.querySelectorAll(
+            '.section-header, .about-content, .product-block, .activity-item, .zenn-card, .contact-content'
+        ).forEach(el => {
             el.classList.add('fade-in-section');
-            // Zenn cards stagged delay
-            if (el.classList.contains('zenn-card')) {
-                el.style.transitionDelay = `${(index % 3) * 0.1}s`;
-            }
+            observer.observe(el);
+        });
+
+        // Stagger feature items
+        document.querySelectorAll('.feature-item').forEach((el, i) => {
+            el.classList.add('fade-in-section');
+            el.style.transitionDelay = `${i * 0.07}s`;
             observer.observe(el);
         });
     </script>
