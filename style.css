@@ -493,6 +493,20 @@ main section.hero {
     color: var(--text-hi);
 }
 
+.team-lead,
+.writing-lead {
+    max-width: 40em;
+    margin: -1.6rem 0 2.6rem;
+    color: var(--text);
+}
+
+.team-grid,
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
 .text-link {
     font-family: var(--mono);
     font-size: 0.8rem;
@@ -552,10 +566,15 @@ main section.hero {
 }
 
 .tech-highlight,
-.writing-card {
+.writing-card,
+.team-card {
     background: var(--night-2);
     border: 1px solid var(--line);
     border-radius: 6px;
+}
+
+.tech-highlight,
+.writing-card {
     padding: 1.7rem 1.6rem 1.5rem;
 }
 
@@ -744,22 +763,7 @@ main section.hero {
     border-bottom: 1px solid var(--line);
 }
 
-.team-lead {
-    max-width: 40em;
-    margin: -1.6rem 0 2.6rem;
-    color: var(--text);
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-}
-
 .team-card {
-    background: var(--night-2);
-    border: 1px solid var(--line);
-    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -886,18 +890,6 @@ main section.hero {
 .writing {
     background: var(--night-0);
     border-bottom: 1px solid var(--line);
-}
-
-.writing-lead {
-    max-width: 40em;
-    margin: -1.6rem 0 2.6rem;
-    color: var(--text);
-}
-
-.writing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
 }
 
 .writing-card {
@@ -1076,14 +1068,54 @@ footer {
 
 /* ---------- Responsive ---------- */
 
+@media (max-width: 960px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        inset: 0;
+        background: rgba(6, 12, 23, 0.96);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2.2rem;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 900px) {
     .product-block {
         grid-template-columns: 1fr;
         gap: 2.4rem;
     }
 
+    .team-grid,
     .writing-grid {
         grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        max-width: 560px;
     }
 
     .tech-highlights {
@@ -1093,11 +1125,6 @@ footer {
     .method-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.6rem;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        max-width: 560px;
     }
 
     .team-card {
@@ -1163,44 +1190,7 @@ footer {
     .team-photo {
         height: auto;
         aspect-ratio: 1 / 1;
-        object-position: 50% 22%;
         border-right: none;
         border-bottom: 1px solid var(--line);
-    }
-
-}
-
-@media (max-width: 960px) {
-    .mobile-menu-btn {
-        display: flex;
-    }
-
-    nav {
-        position: fixed;
-        inset: 0;
-        background: rgba(6, 12, 23, 0.96);
-        -webkit-backdrop-filter: blur(16px);
-        backdrop-filter: blur(16px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    nav.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 2.2rem;
-        text-align: center;
-    }
-
-    nav a {
-        font-size: 1rem;
     }
 }
