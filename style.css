@@ -319,12 +319,21 @@ nav a.nav-contact:hover {
 
 .hero h1 {
     font-family: var(--serif);
-    font-weight: 600;
-    font-size: clamp(2.3rem, 5.4vw, 3.7rem);
-    line-height: 1.4;
-    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.8vw, 3.2rem);
+    line-height: 1.45;
+    letter-spacing: 0.04em;
     color: var(--text-hi);
     margin-bottom: 1.8rem;
+}
+
+.hero-setup {
+    display: block;
+    font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    margin-bottom: 1.2rem;
 }
 
 .hero-lead {
@@ -389,7 +398,8 @@ nav a.nav-contact:hover {
     gap: 2rem;
 }
 
-.stat {
+.stat,
+.svc-step {
     border-left: 1px solid var(--line);
     padding-left: 1.4rem;
 }
@@ -444,6 +454,14 @@ nav a.nav-contact:hover {
     color: var(--text-dim);
     margin-top: 2rem;
     font-family: var(--mono);
+}
+
+.stats-kicker {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
 }
 
 /* ---------- Sections (shared) ---------- */
@@ -507,6 +525,61 @@ main section.hero {
     gap: 1.2rem;
 }
 
+.svc-lead,
+.tech-intro {
+    max-width: 46em;
+    margin-bottom: 3rem;
+}
+
+.svc-lead p+p,
+.tech-intro p+p {
+    margin-top: 1.6rem;
+}
+
+.svc-claim,
+.tech-claim {
+    font-family: var(--serif);
+    letter-spacing: 0.03em;
+    color: var(--text-hi);
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--gold);
+}
+
+.svc-grid,
+.tech-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 3.4rem;
+}
+
+.tech-highlight,
+.writing-card,
+.team-card,
+.svc-card {
+    background: var(--night-2);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.tech-highlight,
+.writing-card,
+.svc-card {
+    padding: 1.7rem 1.6rem 1.5rem;
+}
+
+.svc-card h3::before,
+.feature-item h4::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 0.6rem;
+}
+
 .text-link {
     font-family: var(--mono);
     font-size: 0.8rem;
@@ -535,6 +608,84 @@ main section.hero {
     margin-top: 1.4rem;
 }
 
+/* ---------- Services ---------- */
+
+.services {
+    border-bottom: 1px solid var(--line);
+}
+
+.svc-claim {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 2;
+}
+
+.svc-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-hi);
+    line-height: 1.75;
+    margin-bottom: 0.7rem;
+}
+
+.svc-card p {
+    font-size: 0.84rem;
+    line-height: 1.95;
+    color: var(--text-dim);
+}
+
+.svc-process {
+    border-top: 1px solid var(--line);
+    padding-top: 2.4rem;
+}
+
+.svc-subhead {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
+}
+
+.svc-steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.svc-step-num {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+}
+
+.svc-step h4 {
+    font-family: var(--serif);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-hi);
+    margin-bottom: 0.5rem;
+}
+
+.svc-step p {
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: var(--text-dim);
+}
+
+.svc-note {
+    font-size: 0.84rem;
+    color: var(--text);
+    margin-top: 2.2rem;
+}
+
+.svc-actions {
+    margin-top: 2.6rem;
+}
+
 /* ---------- Technology ---------- */
 
 .technology {
@@ -542,40 +693,9 @@ main section.hero {
     border-bottom: 1px solid var(--line);
 }
 
-.tech-intro {
-    max-width: 46em;
-    margin-bottom: 3rem;
-}
-
 .tech-claim {
-    font-family: var(--serif);
     font-size: clamp(1.15rem, 2.2vw, 1.45rem);
     line-height: 1.9;
-    letter-spacing: 0.03em;
-    color: var(--text-hi);
-    margin-top: 1.6rem;
-    padding-left: 1.2rem;
-    border-left: 2px solid var(--gold);
-}
-
-.tech-highlights {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-    margin-bottom: 3.4rem;
-}
-
-.tech-highlight,
-.writing-card,
-.team-card {
-    background: var(--night-2);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-}
-
-.tech-highlight,
-.writing-card {
-    padding: 1.7rem 1.6rem 1.5rem;
 }
 
 .th-value {
@@ -738,17 +858,6 @@ main section.hero {
     font-weight: 600;
     color: var(--text-hi);
     margin-bottom: 0.45rem;
-}
-
-.feature-item h4::before {
-    content: "";
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--gold);
-    vertical-align: middle;
-    margin-right: 0.6rem;
 }
 
 .feature-item p {
@@ -1068,6 +1177,12 @@ footer {
 
 /* ---------- Responsive ---------- */
 
+@media (max-width: 1180px) and (min-width: 961px) {
+    nav ul {
+        gap: 1.3rem;
+    }
+}
+
 @media (max-width: 960px) {
     .mobile-menu-btn {
         display: flex;
@@ -1118,11 +1233,13 @@ footer {
         max-width: 560px;
     }
 
-    .tech-highlights {
+    .tech-highlights,
+    .svc-grid {
         grid-template-columns: 1fr;
     }
 
-    .method-grid {
+    .method-grid,
+    .svc-steps {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.6rem;
     }
@@ -1155,7 +1272,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: clamp(1.55rem, 6.2vw, 2rem);
         letter-spacing: 0.03em;
     }
 
@@ -1168,7 +1285,8 @@ footer {
         gap: 1.6rem;
     }
 
-    .product-features {
+    .product-features,
+    .svc-steps {
         grid-template-columns: 1fr;
     }
 

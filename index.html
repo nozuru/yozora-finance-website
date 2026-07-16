@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yozora Finance | AIエージェントのための金融データ基盤</title>
+    <title>Yozora Finance | AIのためのデータ基盤</title>
     <meta name="description"
-        content="株式会社Yozora Financeは、約4,000社の開示文書と経済ニュースを構造化し、AIエージェントが一次情報へ直接アクセスできる金融データ基盤を開発しています。">
+        content="株式会社Yozora Financeは、約4,000社の開示文書を構造化した検索基盤を自社開発・運用。同じ技術で、AIのためのデータ基盤の構築(文書構造化・検索・RAG・精度評価)を支援しています。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -32,7 +32,8 @@
                 </button>
                 <nav>
                     <ul>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#about">Mission</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#technology">Technology</a></li>
                         <li><a href="#products">Product</a></li>
                         <li><a href="#team">Leadership</a></li>
@@ -100,12 +101,15 @@
             <div class="container">
                 <div class="hero-content">
                     <p class="hero-eyebrow">Yozora Finance</p>
-                    <h1>AIエージェントに、<br>一次情報を。</h1>
+                    <h1>
+                        <span class="hero-setup">AIはもう、十分に賢い。</span>
+                        足りないのは、<br>AIのためのデータ基盤。
+                    </h1>
                     <p class="hero-lead">
-                        約4,000社の開示文書に加え、マクロ統計や規制当局の決定など投資判断に有用な一次情報を毎日自動収集・構造化。AIエージェントが原典へ直接アクセスできる金融データ基盤を開発しています。
+                        Yozora Financeは、約4,000社の開示文書を構造化し、AIが検索できるデータ基盤として自社開発・運用しています。同じ技術で、PDFやファイルサーバーに眠る企業の文書を、AIが根拠として使える形に整える開発支援を提供しています。
                     </p>
                     <div class="hero-actions">
-                        <a href="#technology" class="btn btn-primary">検索精度ベンチマークを見る</a>
+                        <a href="#services" class="btn btn-primary">開発支援を見る</a>
                         <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
                     </div>
                 </div>
@@ -114,6 +118,7 @@
 
         <section class="stats">
             <div class="container">
+                <p class="stats-kicker">自社データ基盤として本番運用中</p>
                 <div class="stats-grid">
                     <div class="stat">
                         <div class="stat-value">470万<span class="stat-unit">超</span></div>
@@ -136,12 +141,72 @@
         <section class="about" id="about">
             <div class="container">
                 <div class="section-header">
-                    <p class="section-label">About</p>
+                    <p class="section-label">Mission</p>
                     <h2 class="section-title">原典との距離を、ゼロに近づける</h2>
                 </div>
                 <div class="about-content">
-                    <p>Web上では1つの一次情報に対して数十〜数百の派生コンテンツが存在し、LLMの普及でその増殖はさらに加速しています。AIエージェントが信頼できる投資判断を行うには、原典への直接アクセスが不可欠です。</p>
-                    <p>Yozora Financeは、有価証券報告書・決算短信などの開示文書を構造化し、独自の検索基盤を構築することで、AIエージェントと一次情報の距離を縮めます。</p>
+                    <p>AIの性能は、もはやボトルネックではありません。多くの組織でAIが成果を出せない本当の原因は、情報の側にあります。判断の根拠となる一次情報が、PDFやファイルサーバーの中に、AIから見えない形で眠ったままになっていることです。</p>
+                    <p>Yozora Financeは、複雑な日本語文書を収集・構造化し、検索できる形に整えることで、AIと原典の距離をゼロに近づけます。自社では有価証券報告書・決算短信など約4,000社の開示文書を対象にこの基盤を構築・運用し、同じ技術を企業のデータ基盤構築の支援として提供しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Services</p>
+                    <h2 class="section-title">賢いAIに、読めない資料を渡していませんか</h2>
+                </div>
+
+                <div class="svc-lead">
+                    <p>AIを導入したのに、現場で使われない。原因の多くはモデルの性能ではなく、必要な情報がPDFや共有フォルダの中に、AIから見えない形で散らばっていることにあります。どれほど賢いモデルも、渡されない情報には答えられません。</p>
+                    <p class="svc-claim">私たちは、日本語文書を構造化し、検索できる形に整える「AIのためのデータ基盤」を構築します。自社で約4,000社の開示文書に対して行っているのと、同じ仕事です。</p>
+                </div>
+
+                <div class="svc-grid">
+                    <div class="svc-card">
+                        <h3>文書構造化パイプラインの開発</h3>
+                        <p>PDF・帳票・XBRLなどの非定型文書を、目次・セクション・表の構造を保ったまま、AIが扱えるテキスト・Markdownに変換するパイプラインを構築します。</p>
+                    </div>
+                    <div class="svc-card">
+                        <h3>検索・RAG基盤の構築</h3>
+                        <p>キーワード一致と意味検索を組み合わせたハイブリッド検索で、文書群から根拠を返す検索基盤を構築します。出典に戻れる設計で回答を検証可能にし、MCP対応でAIエージェントからも利用できます。</p>
+                    </div>
+                    <div class="svc-card">
+                        <h3>検索精度の評価・改善</h3>
+                        <p>お客様のデータで評価セットを構築し、検索・RAGの精度を数字で測定・改善します。「良くなった気がする」で終わらせない、測定に基づく改善サイクルを提供します。</p>
+                    </div>
+                </div>
+
+                <div class="svc-process">
+                    <p class="svc-subhead">進め方</p>
+                    <ol class="svc-steps">
+                        <li class="svc-step">
+                            <span class="svc-step-num">01</span>
+                            <h4>ヒアリング</h4>
+                            <p>対象の文書と業務、AIに答えさせたい質問を確認します。</p>
+                        </li>
+                        <li class="svc-step">
+                            <span class="svc-step-num">02</span>
+                            <h4>精度検証PoC</h4>
+                            <p>データの一部で検索基盤を試作し、精度を評価レポートとして納品します。</p>
+                        </li>
+                        <li class="svc-step">
+                            <span class="svc-step-num">03</span>
+                            <h4>本開発</h4>
+                            <p>PoCの数字をもとにご判断いただき、本番の基盤を構築します。</p>
+                        </li>
+                        <li class="svc-step">
+                            <span class="svc-step-num">04</span>
+                            <h4>運用・改善</h4>
+                            <p>精度の継続測定と改善を行い、必要に応じて内製化を支援します。</p>
+                        </li>
+                    </ol>
+                    <p class="svc-note">本開発に進むかどうかは、PoCで精度の数字をご覧いただいてから判断できます。</p>
+                </div>
+
+                <div class="svc-actions">
+                    <a href="#contact" class="btn btn-primary">開発のご相談</a>
                 </div>
             </div>
         </section>
@@ -297,7 +362,7 @@
                     <p>評価セットは、適時開示・有価証券報告書からなる約384万チャンクの本番コーパスに対し、複数の検索手法で上位候補をプールして構築(TREC方式)。関連度はグレード2以上を「投資判断に使える根拠」と定義しています。採点基準は人手の判定と突き合わせて設計・調整した上で、モデルの学習に関与していない独立のモデル(Qwen
                         3.7 Plus)により161,808ペア全体に適用しました。グレード境界や定型文の扱いなど判定が難しい事例は人手で検証し、採点品質を確認しています。nDCG@10 (g3)はグレード3のみを正解とする厳格条件です。ベースモデル(Ruri v3
                         130M)からのファインチューニングにより、nDCG@10は0.3312から0.5012に向上しました。</p>
-                    <p>詳細な方法論・追加の評価結果にご関心のある方は<a href="#contact">お問い合わせ</a>ください。</p>
+                    <p>評価セットの構築からモデルの選定・改善までのこのプロセスは、<a href="#services">開発支援</a>でもお客様の文書に対して同じ方法で提供しています。詳細な方法論・追加の評価結果にご関心のある方は<a href="#contact">お問い合わせ</a>ください。</p>
                 </div>
             </div>
         </section>
@@ -314,7 +379,7 @@
                         <p class="product-tagline">企業公表資料と経済ニュースを、AIで扱いやすくする検索API</p>
                         <p class="product-desc">
                             適時開示、IR資料、有価証券報告書、金利・政策・地政学などのニュースを、出典に戻れる形で検索・取得できるREST
-                            APIです。PDFやXBRLの取得・整形、目次・セクション抽出をAPI側で行うため、必要な一次情報だけをAIや分析ワークフローに組み込めます。</p>
+                            APIです。PDFやXBRLの取得・整形、目次・セクション抽出をAPI側で行うため、必要な一次情報だけをAIや分析ワークフローに組み込めます。開発支援で提供する構造化・検索の技術は、この自社基盤の本番運用で日々検証されています。</p>
                         <div class="product-actions">
                             <a href="https://momongasearch.com/" target="_blank" rel="noopener noreferrer"
                                 class="btn btn-primary">プロダクトサイトへ</a>
@@ -380,7 +445,7 @@
                             </svg>
                         </div>
                         <div class="team-body">
-                            <p class="team-role">代表取締役 CEO</p>
+                            <p class="team-role">執行役員 CTO</p>
                             <h3 class="team-name">富田 悠介<span class="team-name-en">Yusuke Tomita</span></h3>
                             <p class="team-bio">
                                 早稲田大学大学院 田中研究室にて、有価証券報告書や契約書のように定型文の多い産業文書から、意味のある記述を探し当てる検索技術を研究。株式投資サークルで代表を経験し、現在は早稲田AI研究会の代表を務める。プロダクト開発・事業戦略を担当。
@@ -391,7 +456,7 @@
                         <img src="team-minamoto.jpg" alt="源怜維の写真" class="team-photo" loading="lazy" width="600"
                             height="600">
                         <div class="team-body">
-                            <p class="team-role">執行役員 CTO</p>
+                            <p class="team-role">執行役員 CRO</p>
                             <h3 class="team-name">源 怜維<span class="team-name-en">Rei Minamoto</span></h3>
                             <p class="team-bio">
                                 早稲田大学大学院 河原研究室にて自然言語処理・大規模言語モデルを研究。国立情報学研究所のリサーチアシスタントとして日本語LLMの研究開発に従事。LLMの安全性と学習データ構築に関する研究が、自然言語処理分野のトップ国際会議ACL
@@ -495,7 +560,7 @@
                     </div>
                     <div class="company-row">
                         <dt>代表者</dt>
-                        <dd>代表取締役 惠良 祐太 / 富田 悠介</dd>
+                        <dd>代表取締役 惠良 祐太</dd>
                     </div>
                     <div class="company-row">
                         <dt>設立</dt>
@@ -511,7 +576,7 @@
                     </div>
                     <div class="company-row">
                         <dt>事業内容</dt>
-                        <dd>金融データ基盤・検索APIの開発および提供</dd>
+                        <dd>金融データ基盤・検索APIの開発および提供、企業向けデータ基盤構築の開発支援</dd>
                     </div>
                 </dl>
             </div>

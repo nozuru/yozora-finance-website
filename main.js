@@ -62,9 +62,10 @@
         '.table-wrap', '.method-grid', '.tech-notes', '.product-block',
         '.news-item', '.writing-card', '.writing-lead', '.writing-more',
         '.company-table', '.contact-content', '.stats-grid', '.stats-note',
+        '.stats-kicker', '.svc-lead', '.svc-process', '.svc-actions',
     ].join(', ');
 
-    const STAGGER_ITEMS = '.feature-item, .tech-highlight, .stat';
+    const STAGGER_ITEMS = '.feature-item, .tech-highlight, .stat, .svc-card';
 
     function observeReveal(el, delay) {
         el.classList.add('fade-in-section');
