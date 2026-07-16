@@ -5,26 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yozora Finance | AIエージェントのための金融データ基盤</title>
+    <meta name="description"
+        content="株式会社Yozora Financeは、約3,800社の開示文書と経済ニュースを構造化し、AIエージェントが一次情報へ直接アクセスできる金融データ基盤を開発しています。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 
 <body>
-    <!-- Background removed for cleaner style -->
-
     <header>
         <div class="container">
             <div class="header-inner">
-                <a href="#" class="logo">
-                    <img src="yozora-finance.JPG" alt="Yozora Finance">
+                <a href="#" class="logo" aria-label="Yozora Finance">
+                    <img src="logo-dark.png" alt="Yozora Finance">
                 </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
@@ -34,10 +33,12 @@
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#activity">Activity</a></li>
-                        <li><a href="#products">Products</a></li>
-
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#products">Product</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#writing">Writing</a></li>
+                        <li><a href="#company">Company</a></li>
+                        <li><a href="#contact" class="nav-contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,13 +47,91 @@
 
     <main>
         <section class="hero">
+            <div class="sky" aria-hidden="true">
+                <svg viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice">
+                    <g class="stars">
+                        <circle cx="60" cy="90" r="1.1" class="tw1" />
+                        <circle cx="150" cy="210" r="0.8" class="tw2" />
+                        <circle cx="240" cy="60" r="1.4" class="tw3" />
+                        <circle cx="330" cy="160" r="0.7" class="tw1" />
+                        <circle cx="90" cy="360" r="1.0" class="tw2" />
+                        <circle cx="200" cy="470" r="0.8" class="tw3" />
+                        <circle cx="320" cy="390" r="1.2" class="tw1" />
+                        <circle cx="420" cy="80" r="0.9" class="tw2" />
+                        <circle cx="470" cy="280" r="0.7" class="tw3" />
+                        <circle cx="380" cy="540" r="1.0" class="tw2" />
+                        <circle cx="520" cy="440" r="0.8" class="tw1" />
+                        <circle cx="560" cy="120" r="1.3" class="tw2" />
+                        <circle cx="640" cy="330" r="0.7" class="tw3" />
+                        <circle cx="700" cy="60" r="1.0" class="tw1" />
+                        <circle cx="620" cy="520" r="0.9" class="tw2" />
+                        <circle cx="760" cy="460" r="0.7" class="tw3" />
+                        <circle cx="840" cy="560" r="1.1" class="tw1" />
+                        <circle cx="980" cy="520" r="0.8" class="tw2" />
+                        <circle cx="1120" cy="480" r="1.0" class="tw3" />
+                        <circle cx="1160" cy="90" r="0.9" class="tw1" />
+                        <circle cx="1060" cy="60" r="0.7" class="tw2" />
+                        <circle cx="740" cy="200" r="0.8" class="tw3" />
+                        <circle cx="900" cy="80" r="0.9" class="tw1" />
+                        <circle cx="1150" cy="300" r="0.8" class="tw2" />
+                        <circle cx="500" cy="30" r="0.8" class="tw3" />
+                        <circle cx="60" cy="560" r="0.9" class="tw1" />
+                    </g>
+                    <g class="constellation">
+                        <line x1="920" y1="250" x2="850" y2="140" />
+                        <line x1="920" y1="250" x2="1030" y2="190" />
+                        <line x1="920" y1="250" x2="975" y2="330" />
+                        <line x1="920" y1="250" x2="810" y2="350" />
+                        <line x1="920" y1="250" x2="775" y2="255" />
+                        <line x1="1030" y1="190" x2="1095" y2="290" />
+                        <line x1="975" y1="330" x2="1095" y2="290" />
+                        <circle cx="850" cy="140" r="2.2" class="node" />
+                        <circle cx="1030" cy="190" r="2.2" class="node" />
+                        <circle cx="975" cy="330" r="2.2" class="node" />
+                        <circle cx="810" cy="350" r="2.2" class="node" />
+                        <circle cx="775" cy="255" r="2.2" class="node" />
+                        <circle cx="1095" cy="290" r="2.2" class="node" />
+                        <circle cx="920" cy="250" r="9" class="halo" />
+                        <circle cx="920" cy="250" r="3.4" class="node query" />
+                    </g>
+                </svg>
+            </div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>AIエージェントに一次情報を届ける<br>金融データ基盤</h1>
+                    <p class="hero-eyebrow">Yozora Finance</p>
+                    <h1>AIエージェントに、<br>一次情報を。</h1>
                     <p class="hero-lead">
-                        約3,800社の開示文書に加え、マクロ統計や規制当局の決定など投資判断に有用な一次情報を毎日自動収集・構造化。AIエージェントが直接アクセスできる環境を提供します。
+                        約3,800社の開示文書に加え、マクロ統計や規制当局の決定など投資判断に有用な一次情報を毎日自動収集・構造化。AIエージェントが原典へ直接アクセスできる金融データ基盤を開発しています。
                     </p>
+                    <div class="hero-actions">
+                        <a href="#technology" class="btn btn-primary">検索精度ベンチマークを見る</a>
+                        <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-value">3,847,659</div>
+                        <div class="stat-label">構造化済みチャンク</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3,875<span class="stat-unit">社</span></div>
+                        <div class="stat-label">カバーする上場企業</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">85,893<span class="stat-unit">件</span></div>
+                        <div class="stat-label">収録文書</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">190<span class="stat-unit">ms</span></div>
+                        <div class="stat-label">セマンティック検索応答 p50 <sup>*</sup></div>
+                    </div>
+                </div>
+                <p class="stats-note">* 本番API実測(2026年4月)。5社指定・top_k=5の代表クエリにおける中央値、初回接続を除く。</p>
             </div>
         </section>
 
@@ -60,55 +139,167 @@
             <div class="container">
                 <div class="section-header">
                     <p class="section-label">About</p>
-                    <h2 class="section-title">Yozora Financeについて</h2>
+                    <h2 class="section-title">原典との距離を、ゼロに近づける</h2>
                 </div>
-
                 <div class="about-content">
                     <p>Web上では1つの一次情報に対して数十〜数百の派生コンテンツが存在し、LLMの普及でその増殖はさらに加速しています。AIエージェントが信頼できる投資判断を行うには、原典への直接アクセスが不可欠です。</p>
-                    <p>Yozora Financeは、有報・決算短信などの開示文書を構造化しベクトル検索基盤を構築することで、AIエージェントと一次情報の距離を縮めます。</p>
+                    <p>Yozora Financeは、有価証券報告書・決算短信などの開示文書を構造化し、独自の検索基盤を構築することで、AIエージェントと一次情報の距離を縮めます。</p>
                 </div>
-
             </div>
         </section>
 
-        <section class="activity" id="activity">
+        <section class="technology" id="technology">
             <div class="container">
                 <div class="section-header">
-                    <p class="section-label">Activity</p>
-                    <h2 class="section-title">活動実績・開発記録</h2>
+                    <p class="section-label">Technology</p>
+                    <h2 class="section-title">独自ベンチマークが示す検索精度</h2>
                 </div>
 
-                <div class="activity-grid">
-                    <div class="activity-item">
-                        <h3>活動実績</h3>
-                        <p>2025年8月、東京証券取引所・東証ホールにて開催されたStudent Investment Conference 2025にて、投資AIエージェントの開発・運用体験企画を実施しました。
-                        </p>
-                        <p>参加者は自然言語による投資方針から、財務健全性や価格動向などの定量指標までを含む独自のプロンプトを設計し、AIによる投資結果を比較・議論しました。</p>
-                        <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
-                            target="_blank" rel="noopener noreferrer" class="product-link">日経COMPASSの記事を見る</a>
+                <div class="tech-intro">
+                    <p>既存の日本語検索ベンチマークはスコアが飽和し、実務の検索品質を測れなくなっています。私たちは約384万件の本番コーパスから「投資判断に使える根拠を返せるか」を測る独自ベンチマークを構築し、その上で埋め込みモデルを自社開発しました。</p>
+                    <p class="tech-claim">1.3億パラメータの自社モデルが、OpenAI・Googleの埋め込みAPIを含む評価対象のすべてを上回りました。</p>
+                </div>
+
+                <div class="tech-highlights">
+                    <div class="tech-highlight">
+                        <div class="th-value">+40.3<span>%</span></div>
+                        <div class="th-label">nDCG@10、OpenAI text-embedding-3-large 比</div>
                     </div>
-                    <div class="activity-item">
-                        <h3>開発記録</h3>
-                        <p>プロダクト開発やプロジェクトの過程を開発記録としてZennにまとめています。</p>
-                        <div class="zenn-cards">
-                            <div class="zenn-card">
-                                <h4>決算短信の差分要約</h4>
-                                <p>旧版・新版の決算短信 PDF/XBRL ZIP を突き合わせ、セクション/文単位の差分取得と2段階要約を行います。</p>
-                                <div class="zenn-card-links">
-                                    <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">GitHub</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">記事1</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser"
-                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事2</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner"
-                                        target="_blank" rel="noopener noreferrer" class="zenn-link">記事3</a>
-                                    <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
-                                        rel="noopener noreferrer" class="zenn-link">記事4</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tech-highlight">
+                        <div class="th-value">+15.7<span>%</span></div>
+                        <div class="th-label">nDCG@10、Gemini Embedding 2(Google)比</div>
                     </div>
+                    <div class="tech-highlight">
+                        <div class="th-value">130M</div>
+                        <div class="th-label">パラメータ数 — 1Bクラスの約8分の1のサイズで最高精度</div>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="bench-table">
+                        <thead>
+                            <tr>
+                                <th>モデル</th>
+                                <th class="num">nDCG@10</th>
+                                <th class="num">MRR@10</th>
+                                <th class="num">nDCG@10 (g3)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ours">
+                                <td>Yozora Investor Embedding v1 130M</td>
+                                <td class="num bar" style="--w:91.1%"><strong>0.5012</strong></td>
+                                <td class="num"><strong>0.8424</strong></td>
+                                <td class="num"><strong>0.3033</strong></td>
+                            </tr>
+                            <tr class="ours">
+                                <td>Yozora Investor Embedding v1 70M</td>
+                                <td class="num bar" style="--w:84.9%">0.4668</td>
+                                <td class="num">0.7993</td>
+                                <td class="num">0.2645</td>
+                            </tr>
+                            <tr>
+                                <td>Sarashina Embedding v2 1B</td>
+                                <td class="num bar" style="--w:82.9%">0.4560</td>
+                                <td class="num">0.7399</td>
+                                <td class="num">0.2474</td>
+                            </tr>
+                            <tr class="ours">
+                                <td>Yozora Investor Embedding v1 30M</td>
+                                <td class="num bar" style="--w:79.2%">0.4357</td>
+                                <td class="num">0.7739</td>
+                                <td class="num">0.2349</td>
+                            </tr>
+                            <tr>
+                                <td>Gemini Embedding 2</td>
+                                <td class="num bar" style="--w:78.8%">0.4333</td>
+                                <td class="num">0.7220</td>
+                                <td class="num">0.2236</td>
+                            </tr>
+                            <tr>
+                                <td>PLaMo Embedding 1B</td>
+                                <td class="num bar" style="--w:74.7%">0.4111</td>
+                                <td class="num">0.7207</td>
+                                <td class="num">0.1977</td>
+                            </tr>
+                            <tr>
+                                <td>BM25</td>
+                                <td class="num bar" style="--w:71.3%">0.3920</td>
+                                <td class="num">0.6743</td>
+                                <td class="num">0.1898</td>
+                            </tr>
+                            <tr>
+                                <td>Qwen3 Embedding 0.6B</td>
+                                <td class="num bar" style="--w:66.1%">0.3637</td>
+                                <td class="num">0.6035</td>
+                                <td class="num">0.1700</td>
+                            </tr>
+                            <tr>
+                                <td>Ruri v3 310M</td>
+                                <td class="num bar" style="--w:65.8%">0.3618</td>
+                                <td class="num">0.6491</td>
+                                <td class="num">0.1698</td>
+                            </tr>
+                            <tr>
+                                <td>Jina Embeddings v5 Text Small</td>
+                                <td class="num bar" style="--w:65.6%">0.3609</td>
+                                <td class="num">0.6199</td>
+                                <td class="num">0.1696</td>
+                            </tr>
+                            <tr>
+                                <td>Harrier OSS v1 0.6B</td>
+                                <td class="num bar" style="--w:65.0%">0.3576</td>
+                                <td class="num">0.6097</td>
+                                <td class="num">0.1629</td>
+                            </tr>
+                            <tr>
+                                <td>OpenAI text-embedding-3-large</td>
+                                <td class="num bar" style="--w:65.0%">0.3573</td>
+                                <td class="num">0.6287</td>
+                                <td class="num">0.1575</td>
+                            </tr>
+                            <tr>
+                                <td>Ruri v3 130M(ベースモデル)</td>
+                                <td class="num bar" style="--w:60.2%">0.3312</td>
+                                <td class="num">0.6186</td>
+                                <td class="num">0.1387</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>参考: RRF(自社130M + BM25)</td>
+                                <td class="num bar" style="--w:96.8%">0.5325</td>
+                                <td class="num">0.8639</td>
+                                <td class="num">0.3329</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="method-grid">
+                    <div class="method-item">
+                        <div class="mi-value">944</div>
+                        <div class="mi-label">評価用の検索文</div>
+                    </div>
+                    <div class="method-item">
+                        <div class="mi-value">43,481</div>
+                        <div class="mi-label">評価対象の文書チャンク</div>
+                    </div>
+                    <div class="method-item">
+                        <div class="mi-value">161,808</div>
+                        <div class="mi-label">採点済みペア</div>
+                    </div>
+                    <div class="method-item">
+                        <div class="mi-value">0–3</div>
+                        <div class="mi-label">4段階の関連度評価</div>
+                    </div>
+                </div>
+
+                <div class="tech-notes">
+                    <p>評価セットは、適時開示・有価証券報告書からなる約384万チャンクの本番コーパスに対し、複数の検索手法で上位候補をプールして構築(TREC方式)。関連度はグレード2以上を「投資判断に使える根拠」と定義しています。採点基準は人手の判定と突き合わせて設計・調整した上で、モデルの学習に関与していない独立のモデル(Qwen
+                        3.7 Plus)により161,808ペア全体に適用しました。グレード境界や定型文の扱いなど判定が難しい事例は人手で検証し、採点品質を確認しています。nDCG@10 (g3)はグレード3のみを正解とする厳格条件です。ベースモデル(Ruri v3
+                        130M)からのファインチューニングにより、nDCG@10は0.3312から0.5012に向上しました。</p>
+                    <p>詳細な方法論・追加の評価結果にご関心のある方は<a href="#contact">お問い合わせ</a>ください。</p>
                 </div>
             </div>
         </section>
@@ -116,49 +307,166 @@
         <section class="products" id="products">
             <div class="container">
                 <div class="section-header">
-                    <p class="section-label">Products</p>
-                    <h2 class="section-title">プロダクト</h2>
+                    <p class="section-label">Product</p>
+                    <h2 class="section-title">モモンガサーチAPI</h2>
                 </div>
 
                 <div class="product-block">
                     <div class="product-info">
-                        <div class="product-header">
-                            <h3 class="product-name">Momonga DB</h3>
-                            <span class="product-status">準備中</span>
-                        </div>
-                        <p class="product-tagline">AIエージェントに一次情報を届ける金融データ基盤</p>
-
+                        <p class="product-tagline">企業公表資料と経済ニュースを、AIで扱いやすくする検索API</p>
                         <p class="product-desc">
-                            一次情報だけを収集・構造化し、ChatGPTやClaude等のAIエージェントにとって利用しやすい形で提供する日本株データベースです。EDINET（有価証券報告書）、TDNet（決算短信・適時開示）などから約3,800社の開示文書を毎日自動収集しています。</p>
+                            適時開示、IR資料、有価証券報告書、金利・政策・地政学などのニュースを、出典に戻れる形で検索・取得できるREST
+                            APIです。PDFやXBRLの取得・整形、目次・セクション抽出をAPI側で行うため、必要な一次情報だけをAIや分析ワークフローに組み込めます。</p>
+                        <div class="product-actions">
+                            <a href="https://momongasearch.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary">プロダクトサイトへ</a>
+                        </div>
                     </div>
 
                     <div class="product-features">
                         <div class="feature-item">
-                            <h4>PDF → Markdown変換</h4>
-                            <p>開示文書をVLMでMarkdownに変換。PDFと比べてトークン消費を1.5〜5分の1に削減</p>
+                            <h4>PDF・XBRLの整形</h4>
+                            <p>開示資料の本文を、AIや分析コードで扱いやすいテキスト・Markdown形式で取得</p>
                         </div>
                         <div class="feature-item">
-                            <h4>チャンク分割・構造化</h4>
-                            <p>意味のまとまりで分割し、階層構造の保持と目次を作成。AIエージェント向けメタデータも付与</p>
+                            <h4>目次・セクション抽出</h4>
+                            <p>文書の構造と各セクションの文字数を確認し、必要な箇所だけを選んで取得</p>
                         </div>
                         <div class="feature-item">
-                            <h4>ベクトル検索</h4>
-                            <p>キーワード検索と意味検索を組み合わせたハイブリッド検索。数十万件でも0.1〜0.3秒で結果を返却</p>
+                            <h4>ハイブリッド検索</h4>
+                            <p>キーワード一致と意味検索を組み合わせ、表現の揺れを含む文書内の根拠候補を特定</p>
                         </div>
                         <div class="feature-item">
-                            <h4>差分検出</h4>
-                            <p>同種の文書について前四半期や前年同期と比較し、変更箇所を自動抽出</p>
+                            <h4>必要な情報だけ取得</h4>
+                            <p>候補文書を絞り込んでから、必要な本文・ページ画像・元ファイルだけを取得</p>
                         </div>
                         <div class="feature-item">
-                            <h4>重複排除</h4>
-                            <p>同一の出来事について述べた複数の文書を判定し、1つにまとめて情報の重複を排除</p>
+                            <h4>出典を確認可能</h4>
+                            <p>開示資料やニュースの参照先を保持し、検索・分析結果から元の情報を確認可能</p>
                         </div>
                         <div class="feature-item">
-                            <h4>MCP対応API</h4>
-                            <p>月額課金のAPI。ChatGPTやClaude Code等に手軽に導入可能</p>
+                            <h4>MCP対応</h4>
+                            <p>Claude CodeやCodexなどのAIエージェントと簡単に連携 — <a
+                                    href="https://github.com/ReiMinamoto/momonga_search_mcp" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a></p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="news" id="news">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">News</p>
+                    <h2 class="section-title">ニュース</h2>
+                </div>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <div class="news-date">2026.05</div>
+                        <div class="news-body">
+                            <span class="news-cat">プレスリリース</span>
+                            <h3>「モモンガサーチAPI」ベータ提供開始 — 320万超の本文・表を横断検索</h3>
+                            <a href="https://prtimes.jp/main/html/rd/p/000000001.000182913.html" target="_blank"
+                                rel="noopener noreferrer" class="text-link">PR TIMESで読む</a>
+                        </div>
+                    </li>
+                    <li class="news-item">
+                        <div class="news-date">2025.08</div>
+                        <div class="news-body">
+                            <span class="news-cat">イベント</span>
+                            <h3>Student Investment Conference 2025(東京証券取引所・東証ホール)にて、投資AIエージェントの開発・運用体験企画を実施</h3>
+                            <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
+                                target="_blank" rel="noopener noreferrer" class="text-link">日経COMPASSの記事を見る</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="writing" id="writing">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Writing</p>
+                    <h2 class="section-title">技術発信</h2>
+                </div>
+                <p class="writing-lead">プロダクト開発の過程や検索技術の知見を、開発記録としてZennで公開しています。</p>
+                <div class="writing-grid">
+                    <article class="writing-card">
+                        <p class="wc-kicker">連載(全4回)</p>
+                        <h3>Yozora Diff 決算版 — 決算短信の「意味のある変化」だけをLLMで抽出する</h3>
+                        <p>新旧の決算短信PDF/XBRLを突き合わせ、文単位の差分検出と2段階要約を行うパイプラインの開発記録。</p>
+                        <div class="wc-links">
+                            <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
+                                rel="noopener noreferrer">#1 概要</a>
+                            <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser" target="_blank"
+                                rel="noopener noreferrer">#2 構造化</a>
+                            <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner" target="_blank"
+                                rel="noopener noreferrer">#3 文対応付け</a>
+                            <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
+                                rel="noopener noreferrer">#4 要約</a>
+                            <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="writing-card">
+                        <p class="wc-kicker">ガイド</p>
+                        <h3>Momonga Search MCPをClaude / Codexで使う</h3>
+                        <p>AIエージェントからモモンガサーチAPIを利用するためのMCPサーバーのセットアップガイド。</p>
+                        <div class="wc-links">
+                            <a href="https://zenn.dev/ray000/articles/momonga-search-mcp-setup" target="_blank"
+                                rel="noopener noreferrer">記事を読む</a>
+                        </div>
+                    </article>
+                    <article class="writing-card">
+                        <p class="wc-kicker">勉強会</p>
+                        <h3>AI勉強会シリーズの資料公開</h3>
+                        <p>学生向けに運営しているAI勉強会の資料。LLM・AIエージェント・RAGと情報検索の基礎を扱っています。</p>
+                        <div class="wc-links">
+                            <a href="https://zenn.dev/ray000/articles/waseda-ai-study-01-intro" target="_blank"
+                                rel="noopener noreferrer">#1 LLMとAIエージェント入門</a>
+                            <a href="https://zenn.dev/ray000/articles/waseda-ai-study-02-rag" target="_blank"
+                                rel="noopener noreferrer">#2 RAGと情報検索</a>
+                        </div>
+                    </article>
+                </div>
+                <p class="writing-more"><a href="https://zenn.dev/ray000" target="_blank" rel="noopener noreferrer"
+                        class="text-link">Zennですべての記事を見る</a></p>
+            </div>
+        </section>
+
+        <section class="company" id="company">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">Company</p>
+                    <h2 class="section-title">会社概要</h2>
+                </div>
+                <dl class="company-table">
+                    <div class="company-row">
+                        <dt>社名</dt>
+                        <dd>株式会社Yozora Finance</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>代表者</dt>
+                        <dd>代表取締役 富田 悠介</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>設立</dt>
+                        <dd>2026年2月</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>所在地</dt>
+                        <dd>東京都調布市</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>資本金</dt>
+                        <dd>500万円</dd>
+                    </div>
+                    <div class="company-row">
+                        <dt>事業内容</dt>
+                        <dd>金融データ基盤・検索APIの開発および提供</dd>
+                    </div>
+                </dl>
             </div>
         </section>
 
@@ -168,8 +476,8 @@
                     <p class="section-label">Contact</p>
                     <h2 class="section-title">お問い合わせ</h2>
                 </div>
-
                 <div class="contact-content">
+                    <p class="contact-lead">出資・協業に関するご相談、金融データ処理・検索基盤の開発に関するご相談は、メールにてご連絡ください。</p>
                     <a href="mailto:info@yozorafinance.com" class="contact-email">info@yozorafinance.com</a>
                 </div>
             </div>
@@ -177,84 +485,12 @@
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>© 2026 Yozora Finance</div>
-                <div class="footer-links">
-                    <span>X 準備中</span>
-                </div>
-            </div>
+        <div class="container footer-inner">
+            © 2026 Yozora Finance Inc.
         </div>
     </footer>
 
-    <script>
-        // Header scroll effect
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 10);
-        }, { passive: true });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('nav');
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenuBtn.classList.toggle('active');
-                nav.classList.toggle('active');
-                document.body.classList.toggle('no-scroll');
-            });
-
-            document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenuBtn.classList.remove('active');
-                    nav.classList.remove('active');
-                    document.body.classList.remove('no-scroll');
-                });
-            });
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]:not(.zenn-card)').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                if (href === '#') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offset = target.getBoundingClientRect().top + window.pageYOffset - 72;
-                        window.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-
-        // Scroll Animations
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '0px', threshold: 0.1 });
-
-        document.querySelectorAll(
-            '.section-header, .about-content, .product-block, .activity-item, .zenn-card, .contact-content'
-        ).forEach(el => {
-            el.classList.add('fade-in-section');
-            observer.observe(el);
-        });
-
-        // Stagger feature items
-        document.querySelectorAll('.feature-item').forEach((el, i) => {
-            el.classList.add('fade-in-section');
-            el.style.transitionDelay = `${i * 0.07}s`;
-            observer.observe(el);
-        });
-    </script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
