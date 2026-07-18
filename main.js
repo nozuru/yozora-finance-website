@@ -48,6 +48,16 @@
         });
     });
 
+    const benchToggle = document.querySelector('.bench-toggle');
+    if (benchToggle) {
+        benchToggle.addEventListener('click', () => {
+            const wrap = benchToggle.closest('.table-wrap');
+            const expanded = wrap.classList.toggle('expanded');
+            benchToggle.setAttribute('aria-expanded', String(expanded));
+            benchToggle.textContent = expanded ? '上位モデルのみ表示' : '全13モデルの結果を表示';
+        });
+    }
+
     const revealObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -62,7 +72,7 @@
         '.table-wrap', '.method-grid', '.tech-notes', '.product-block',
         '.news-item', '.writing-card', '.writing-lead', '.writing-more',
         '.company-table', '.contact-content', '.stats-grid', '.stats-note',
-        '.stats-kicker', '.svc-lead', '.svc-process', '.svc-actions',
+        '.stats-kicker', '.svc-lead', '.svc-process', '.svc-trust', '.svc-actions',
     ].join(', ');
 
     const STAGGER_ITEMS = '.feature-item, .tech-highlight, .stat, .svc-card';
