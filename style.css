@@ -887,24 +887,6 @@ main section.hero {
     filter: saturate(0.88);
 }
 
-.team-photo-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(120% 90% at 50% 110%, rgba(28, 52, 94, 0.45) 0%, rgba(28, 52, 94, 0) 60%),
-        var(--night-3);
-    filter: none;
-}
-
-.team-photo-placeholder svg {
-    width: 34%;
-    fill: none;
-    stroke: rgba(152, 172, 202, 0.35);
-    stroke-width: 2.5;
-    stroke-linecap: round;
-}
-
 .team-body {
     padding: 1.5rem 1.5rem 1.7rem;
 }
