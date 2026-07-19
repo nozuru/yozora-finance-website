@@ -68,12 +68,12 @@
     }, { rootMargin: '0px', threshold: 0.08 });
 
     const REVEAL_BLOCKS = [
-        '.section-header', '.about-content', '.tech-intro', '.tech-highlights',
-        '.table-wrap', '.method-grid', '.tech-notes', '.product-block',
-        '.news-item', '.writing-card', '.writing-lead', '.writing-more',
-        '.team-lead',
-        '.company-table', '.contact-content', '.stats-grid', '.stats-note',
-        '.stats-kicker', '.svc-lead', '.svc-process', '.svc-trust', '.svc-actions',
+        '.section-header', '.section-lead', '.about-content',
+        '.tech-intro', '.tech-highlights', '.table-wrap', '.method-grid', '.tech-notes',
+        '.product-block', '.news-item', '.writing-card', '.writing-more',
+        '.company-table', '.contact-content',
+        '.stats-grid', '.stats-note', '.stats-kicker',
+        '.svc-lead', '.svc-process', '.svc-trust', '.svc-actions',
     ].join(', ');
 
     const STAGGER_ITEMS = '.feature-item, .tech-highlight, .stat, .svc-card, .team-card';
