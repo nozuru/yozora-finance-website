@@ -958,6 +958,21 @@ main section {
     background-color: var(--bg-surface);
 }
 
+.product-title-lockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product-icon {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 auto;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+}
+
 .product-block {
     display: flex;
     flex-direction: column;
@@ -1427,6 +1442,16 @@ footer {
 
     .section-header {
         margin-bottom: 2.5rem;
+    }
+
+    .product-title-lockup {
+        gap: 0.75rem;
+    }
+
+    .product-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 11px;
     }
 
     .hero {
