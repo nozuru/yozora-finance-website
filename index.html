@@ -65,11 +65,10 @@
                         足りないのは、<br>AIのためのデータ基盤。
                     </h1>
                     <p class="hero-lead">
-                        Yozora Financeは、約4,000社の開示文書を構造化し、AIが検索できるデータ基盤として自社開発・運用しています。同じ技術で、PDFや共有フォルダに眠る企業の文書を、AIが根拠として使える形に整えます。
+                        Yozora Financeは、約4,000社の開示文書を構造化し、AIが検索できるデータ基盤として自社開発・運用してきました。この技術による文書基盤の構築を、開発支援として提供しています。
                     </p>
                     <div class="hero-actions">
-                        <a href="#services" class="btn btn-primary">開発支援を見る</a>
-                        <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+                        <a href="#contact" class="btn btn-primary">お問い合わせ</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +104,7 @@
                 </div>
 
                 <div class="svc-lead">
-                    <p class="svc-claim">調査報告書、顧客向けレポート、過去の会議資料。会社の知見の多くは、形式も書き方もばらばらな文書のなかに散らばっています。探すのは今も人力で、最後は詳しい人の記憶が頼りです。私たちは、自社基盤の運用で日々磨いている構造化・検索の技術で、そこから答えを引き出せるようにします。</p>
+                    <p class="svc-claim">調査報告書、顧客向けレポート、過去の会議資料。会社の知見の多くは、ファイル形式も書き方もばらばらな文書のなかに散らばっています。私たちは、この文書群を、必要なときに知見を取り出せる資産に変えます。</p>
                 </div>
 
                 <div class="svc-grid">
@@ -115,11 +114,11 @@
                     </div>
                     <div class="svc-card">
                         <h3>検索・RAG基盤の構築</h3>
-                        <p>キーワード一致と意味検索を組み合わせたハイブリッド検索で、文書群から根拠を返します。出典に戻れる設計で回答を検証可能にし、MCP対応でAIエージェントからも利用できます。</p>
+                        <p>キーワード一致と意味検索を組み合わせたハイブリッド検索で、文書群から根拠を返します。出典に戻れる設計で回答を検証可能にし、MCPやAgent Skillsを通じてAIエージェントからも利用できます。</p>
                     </div>
                     <div class="svc-card">
                         <h3>検索精度の評価・改善</h3>
-                        <p>お客様のデータで評価セットを作成し、検索・RAGの精度を数字で測定・改善します。「良くなった気がする」で終わらせない、測定に基づく改善サイクルを提供します。</p>
+                        <p>お客様のデータで評価セットを作成し、検索・RAGの精度を数字で測定・改善します。「良くなった気がする」で終わらせません。</p>
                     </div>
                 </div>
 
@@ -343,38 +342,12 @@
                             APIです。PDFやXBRLの取得・整形、目次・セクション抽出をAPI側で行うため、必要な一次情報だけをAIや分析ワークフローに組み込めます。</p>
                         <div class="product-actions">
                             <a href="https://momongasearch.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-primary">プロダクトサイトへ</a>
+                                class="btn btn-primary btn-external">プロダクトサイトへ</a>
+                            <a href="https://github.com/ReiMinamoto/momonga_search_mcp" target="_blank"
+                                rel="noopener noreferrer" class="text-link external">MCPサーバー(GitHub)</a>
                         </div>
                     </div>
 
-                    <div class="product-features">
-                        <div class="feature-item">
-                            <h4>PDF・XBRLの整形</h4>
-                            <p>開示資料の本文を、AIや分析コードで扱いやすいテキスト・Markdown形式で取得</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>目次・セクション抽出</h4>
-                            <p>文書の構造と各セクションの文字数を確認し、必要な箇所だけを選んで取得</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>ハイブリッド検索</h4>
-                            <p>キーワード一致と意味検索を組み合わせ、表現の揺れを含む文書内の根拠候補を特定</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>必要な情報だけ取得</h4>
-                            <p>候補文書を絞り込んでから、必要な本文・ページ画像・元ファイルだけを取得</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>出典を確認可能</h4>
-                            <p>開示資料やニュースの参照先を保持し、検索・分析結果から元の情報を確認可能</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4>MCP対応</h4>
-                            <p>Claude CodeやCodexなどのAIエージェントと簡単に連携 — <a
-                                    href="https://github.com/ReiMinamoto/momonga_search_mcp" target="_blank"
-                                    rel="noopener noreferrer">GitHub</a></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -437,7 +410,7 @@
                             <span class="entry-cat">プレスリリース</span>
                             <h3>「モモンガサーチAPI」ベータ提供開始 — 320万超の本文・表を横断検索</h3>
                             <a href="https://prtimes.jp/main/html/rd/p/000000001.000182913.html" target="_blank"
-                                rel="noopener noreferrer" class="text-link">PR TIMESで読む</a>
+                                rel="noopener noreferrer" class="text-link external">PR TIMESで読む</a>
                         </div>
                     </li>
                 </ul>
@@ -489,12 +462,12 @@
                                         rel="noopener noreferrer">LLMによる要約</a></li>
                             </ol>
                             <p class="entry-repo"><a href="https://github.com/ReiMinamoto/yozora-diff-kessan"
-                                    target="_blank" rel="noopener noreferrer" class="text-link">GitHubで実装を見る</a></p>
+                                    target="_blank" rel="noopener noreferrer" class="text-link external">GitHubで実装を見る</a></p>
                         </div>
                     </li>
                 </ul>
                 <p class="writing-more"><a href="https://zenn.dev/ray000" target="_blank" rel="noopener noreferrer"
-                        class="text-link">Zennですべての記事を見る</a></p>
+                        class="text-link external">Zennですべての記事を見る</a></p>
             </div>
         </section>
 

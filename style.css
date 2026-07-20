@@ -557,17 +557,37 @@ main section {
     transform: translateX(4px);
 }
 
+/* External variant: ↗ signals the link leaves this site */
+
+.text-link.external::after {
+    content: '\2197' / '';
+}
+
+.text-link.external:hover::after {
+    transform: translate(3px, -3px);
+}
+
+.btn-external::after {
+    content: '\2197' / '';
+    margin-left: 0.6em;
+    font-size: 0.95em;
+    display: inline-block;
+    transition: transform var(--transition-base);
+}
+
+.btn-external:hover::after {
+    transform: translate(2px, -2px);
+}
+
 /* Inline accent links in prose */
 
-.tech-notes a,
-.feature-item a {
+.tech-notes a {
     color: var(--brand-accent);
     border-bottom: 1px solid var(--border-color);
     transition: border-color var(--transition-fast);
 }
 
-.tech-notes a:hover,
-.feature-item a:hover {
+.tech-notes a:hover {
     border-bottom-color: var(--brand-accent);
 }
 
@@ -593,20 +613,12 @@ main section {
     border-left: 2px solid var(--brand-accent);
 }
 
-/* Soft bordered surface (Services cards / Product features) */
+/* Soft bordered surface (Services cards) */
 
-.svc-card,
-.feature-item {
+.svc-card {
     background: var(--bg-body);
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    transition: border-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.svc-card:hover,
-.feature-item:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-sm);
 }
 
 /* Left-ruled metric / step columns */
@@ -980,6 +992,14 @@ main section {
     gap: 3rem;
 }
 
+/* Centered column, left-aligned text — same rhythm as .svc-lead / .tech-intro */
+
+.product-info {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .product-tagline {
     font-size: 1.05rem;
     color: var(--brand-accent);
@@ -996,46 +1016,10 @@ main section {
 
 .product-actions {
     margin-top: 1.75rem;
-}
-
-.product-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    counter-reset: feature;
-}
-
-.feature-item {
-    counter-increment: feature;
-    padding: 1.75rem;
-    position: relative;
-}
-
-.feature-item::before {
-    content: counter(feature, decimal-leading-zero);
-    font-family: var(--font-display-en);
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--brand-accent);
-    opacity: 0.12;
-    line-height: 1;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.feature-item h4 {
-    font-size: 0.925rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    line-height: 1.4;
-}
-
-.feature-item p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    margin: 0;
-    line-height: 1.75;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.75rem;
 }
 
 /* ---- Team ---- */
@@ -1340,10 +1324,6 @@ footer {
 
 @media (max-width: 1024px) {
 
-    .product-features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     nav ul {
         gap: 1.4rem;
     }
@@ -1482,8 +1462,7 @@ footer {
         padding-left: 1.1rem;
     }
 
-    .svc-steps,
-    .product-features {
+    .svc-steps {
         grid-template-columns: 1fr;
     }
 
