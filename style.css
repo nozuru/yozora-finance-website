@@ -57,6 +57,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: clip;
 }
 
 body {
@@ -1357,7 +1358,7 @@ footer {
     nav {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 100%;
         height: 100vh;
         height: 100dvh;
@@ -1365,13 +1366,14 @@ footer {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         padding: 100px 2rem 2rem;
-        transition: right 0.35s var(--ease-out-expo), visibility 0.35s;
+        transform: translateX(100%);
+        transition: transform 0.35s var(--ease-out-expo), visibility 0.35s;
         display: block;
         visibility: hidden;
     }
 
     nav.active {
-        right: 0;
+        transform: translateX(0);
         visibility: visible;
     }
 
