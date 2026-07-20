@@ -68,9 +68,9 @@
     }, { rootMargin: '0px', threshold: 0.08 });
 
     const REVEAL_BLOCKS = [
-        '.section-header', '.section-lead', '.about-content',
+        '.section-header', '.section-lead',
         '.tech-intro', '.tech-highlights', '.table-wrap', '.method-grid', '.tech-notes',
-        '.product-block', '.news-item', '.writing-card', '.writing-more',
+        '.product-block', '.entry-item', '.writing-more',
         '.company-table', '.contact-content',
         '.stats-grid', '.stats-note', '.stats-kicker',
         '.svc-lead', '.svc-process', '.svc-trust', '.svc-actions',

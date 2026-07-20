@@ -97,19 +97,6 @@
             </div>
         </section>
 
-        <section class="about" id="about">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-label">Mission</p>
-                    <h2 class="section-title">原典との距離を、ゼロに近づける</h2>
-                </div>
-                <div class="about-content">
-                    <p>AIが成果を出せない原因の多くは、モデルではなく情報の側にあります。判断の根拠となる一次情報が、AIから見えない形で眠っている——Yozora Financeは、複雑な日本語文書を収集・構造化することで、AIと原典の距離をゼロに近づけます。</p>
-                    <p>この技術は、開示文書に限られたものではありません。金融文書で磨いた構造化・検索・評価の技術を、契約書・調査報告書・社内文書といった産業文書全体に広げていきます。</p>
-                </div>
-            </div>
-        </section>
-
         <section class="services" id="services">
             <div class="container">
                 <div class="section-header">
@@ -118,7 +105,7 @@
                 </div>
 
                 <div class="svc-lead">
-                    <p class="svc-claim">私たちは、日本語文書を構造化し、検索できる形に整えるデータ基盤を構築します。自社で約4,000社の開示文書に対して行っているのと、同じ仕事です。</p>
+                    <p class="svc-claim">私たちは、契約書・調査報告書・社内文書などの日本語文書を構造化し、検索できる形に整えるデータ基盤を構築します。約4,000社分の開示文書を日々収集・構造化する基盤を自社で開発・運用し、そこで培った技術をお客様の文書にも適用します。</p>
                 </div>
 
                 <div class="svc-grid">
@@ -439,20 +426,20 @@
                     <p class="section-label">News</p>
                     <h2 class="section-title">ニュース</h2>
                 </div>
-                <ul class="news-list">
-                    <li class="news-item">
-                        <div class="news-date">2026.05</div>
-                        <div class="news-body">
-                            <span class="news-cat">プレスリリース</span>
+                <ul class="entry-list">
+                    <li class="entry-item">
+                        <div class="entry-date">2026.05</div>
+                        <div class="entry-body">
+                            <span class="entry-cat">プレスリリース</span>
                             <h3>「モモンガサーチAPI」ベータ提供開始 — 320万超の本文・表を横断検索</h3>
                             <a href="https://prtimes.jp/main/html/rd/p/000000001.000182913.html" target="_blank"
                                 rel="noopener noreferrer" class="text-link">PR TIMESで読む</a>
                         </div>
                     </li>
-                    <li class="news-item">
-                        <div class="news-date">2025.08</div>
-                        <div class="news-body">
-                            <span class="news-cat">イベント</span>
+                    <li class="entry-item">
+                        <div class="entry-date">2025.08</div>
+                        <div class="entry-body">
+                            <span class="entry-cat">イベント</span>
                             <h3>Student Investment Conference 2025（東証ホール）にて、投資AIエージェントの開発・運用体験企画を実施</h3>
                             <a href="https://www.nikkei.com/compass/content/PRTKDB000000002_000168483/article"
                                 target="_blank" rel="noopener noreferrer" class="text-link">日経COMPASSの記事を見る</a>
@@ -469,45 +456,54 @@
                     <h2 class="section-title">技術発信</h2>
                 </div>
                 <p class="section-lead">プロダクト開発の過程や検索技術の知見を、開発記録としてZennで公開しています。</p>
-                <div class="writing-grid">
-                    <article class="writing-card">
-                        <p class="wc-kicker">連載(全4回)</p>
-                        <h3>Yozora Diff 決算版 — 決算短信の「意味のある変化」だけをLLMで抽出する</h3>
-                        <p>新旧の決算短信PDF/XBRLを突き合わせ、文単位の差分検出と2段階要約を行うパイプラインの開発記録。</p>
-                        <div class="wc-links">
-                            <a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
-                                rel="noopener noreferrer">#1 概要</a>
-                            <a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser" target="_blank"
-                                rel="noopener noreferrer">#2 構造化</a>
-                            <a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner" target="_blank"
-                                rel="noopener noreferrer">#3 文対応付け</a>
-                            <a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
-                                rel="noopener noreferrer">#4 要約</a>
-                            <a href="https://github.com/ReiMinamoto/yozora-diff-kessan" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
+                <ul class="entry-list">
+                    <li class="entry-item">
+                        <div class="entry-date">2026.06</div>
+                        <div class="entry-body">
+                            <span class="entry-cat">ガイド</span>
+                            <h3><a href="https://zenn.dev/ray000/articles/momonga-search-mcp-setup" target="_blank"
+                                    rel="noopener noreferrer">Momonga Search MCPをClaude / Codexで使う</a></h3>
+                            <p class="entry-desc">AIエージェントからモモンガサーチAPIを利用するためのMCPサーバーのセットアップガイド。</p>
                         </div>
-                    </article>
-                    <article class="writing-card">
-                        <p class="wc-kicker">ガイド</p>
-                        <h3>Momonga Search MCPをClaude / Codexで使う</h3>
-                        <p>AIエージェントからモモンガサーチAPIを利用するためのMCPサーバーのセットアップガイド。</p>
-                        <div class="wc-links">
-                            <a href="https://zenn.dev/ray000/articles/momonga-search-mcp-setup" target="_blank"
-                                rel="noopener noreferrer">記事を読む</a>
+                    </li>
+                    <li class="entry-item">
+                        <div class="entry-date">2026.06</div>
+                        <div class="entry-body">
+                            <span class="entry-cat">勉強会・全2回</span>
+                            <h3><a href="https://zenn.dev/ray000/articles/waseda-ai-study-01-intro" target="_blank"
+                                    rel="noopener noreferrer">AI勉強会シリーズの資料公開</a></h3>
+                            <p class="entry-desc">学生向けに運営しているAI勉強会の資料。LLM・AIエージェント・RAGと情報検索の基礎を扱っています。</p>
+                            <ol class="entry-parts">
+                                <li><a href="https://zenn.dev/ray000/articles/waseda-ai-study-01-intro" target="_blank"
+                                        rel="noopener noreferrer">LLMとAIエージェント入門</a></li>
+                                <li><a href="https://zenn.dev/ray000/articles/waseda-ai-study-02-rag" target="_blank"
+                                        rel="noopener noreferrer">RAGと情報検索</a></li>
+                            </ol>
                         </div>
-                    </article>
-                    <article class="writing-card">
-                        <p class="wc-kicker">勉強会</p>
-                        <h3>AI勉強会シリーズの資料公開</h3>
-                        <p>学生向けに運営しているAI勉強会の資料。LLM・AIエージェント・RAGと情報検索の基礎を扱っています。</p>
-                        <div class="wc-links">
-                            <a href="https://zenn.dev/ray000/articles/waseda-ai-study-01-intro" target="_blank"
-                                rel="noopener noreferrer">#1 LLMとAIエージェント入門</a>
-                            <a href="https://zenn.dev/ray000/articles/waseda-ai-study-02-rag" target="_blank"
-                                rel="noopener noreferrer">#2 RAGと情報検索</a>
+                    </li>
+                    <li class="entry-item">
+                        <div class="entry-date">2025.12</div>
+                        <div class="entry-body">
+                            <span class="entry-cat">連載・全4回</span>
+                            <h3><a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
+                                    rel="noopener noreferrer">Yozora Diff 決算版 — 決算短信の「意味のある変化」だけをLLMで抽出する</a>
+                            </h3>
+                            <p class="entry-desc">新旧の決算短信PDF/XBRLを突き合わせ、文単位の差分検出と2段階要約を行うパイプラインの開発記録。</p>
+                            <ol class="entry-parts">
+                                <li><a href="https://zenn.dev/ray000/articles/2025-10-01-overview" target="_blank"
+                                        rel="noopener noreferrer">概要と全体像</a></li>
+                                <li><a href="https://zenn.dev/ray000/articles/2025-10-08-document_parser" target="_blank"
+                                        rel="noopener noreferrer">XBRL/PDFの構造化</a></li>
+                                <li><a href="https://zenn.dev/ray000/articles/2025-10-15-sentence_alignner" target="_blank"
+                                        rel="noopener noreferrer">新旧の文の対応付け</a></li>
+                                <li><a href="https://zenn.dev/ray000/articles/2025-10-22-llm_summarizer" target="_blank"
+                                        rel="noopener noreferrer">LLMによる要約</a></li>
+                            </ol>
+                            <p class="entry-repo"><a href="https://github.com/ReiMinamoto/yozora-diff-kessan"
+                                    target="_blank" rel="noopener noreferrer" class="text-link">GitHubで実装を見る</a></p>
                         </div>
-                    </article>
-                </div>
+                    </li>
+                </ul>
                 <p class="writing-more"><a href="https://zenn.dev/ray000" target="_blank" rel="noopener noreferrer"
                         class="text-link">Zennですべての記事を見る</a></p>
             </div>

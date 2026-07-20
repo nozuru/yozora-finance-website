@@ -558,7 +558,6 @@ main section {
 
 /* Inline accent links in prose */
 
-.about-content a,
 .tech-notes a,
 .feature-item a {
     color: var(--brand-accent);
@@ -566,7 +565,6 @@ main section {
     transition: border-color var(--transition-fast);
 }
 
-.about-content a:hover,
 .tech-notes a:hover,
 .feature-item a:hover {
     border-bottom-color: var(--brand-accent);
@@ -627,20 +625,6 @@ main section {
 .method-item,
 .svc-step {
     padding-left: 1.4rem;
-}
-
-/* ---- About (Mission) ---- */
-
-.about {
-    background-color: var(--bg-body);
-}
-
-.about-content {
-    max-width: 680px;
-    margin: 0 auto;
-    font-size: 1.025rem;
-    color: var(--text-secondary);
-    line-height: 2;
 }
 
 /* ---- Services ---- */
@@ -1105,13 +1089,15 @@ main section {
     background-color: var(--bg-surface);
 }
 
-.news-list {
+/* News/Writing共通の日付付きエントリー行 */
+
+.entry-list {
     list-style: none;
     max-width: 840px;
     margin: 0 auto;
 }
 
-.news-item {
+.entry-item {
     display: grid;
     grid-template-columns: 110px 1fr;
     gap: 2.5rem;
@@ -1119,11 +1105,11 @@ main section {
     border-bottom: 1px solid var(--border-color);
 }
 
-.news-item:first-child {
+.entry-item:first-child {
     border-top: 1px solid var(--border-color);
 }
 
-.news-date {
+.entry-date {
     font-family: var(--font-display-en);
     font-size: 1.05rem;
     font-weight: 500;
@@ -1132,7 +1118,7 @@ main section {
     font-variant-numeric: tabular-nums;
 }
 
-.news-cat {
+.entry-cat {
     display: block;
     font-size: 0.72rem;
     font-weight: 600;
@@ -1141,7 +1127,7 @@ main section {
     margin-bottom: 0.4rem;
 }
 
-.news-body h3 {
+.entry-body h3 {
     font-size: 1.02rem;
     font-weight: 500;
     line-height: 1.8;
@@ -1155,71 +1141,71 @@ main section {
     background-color: var(--bg-body);
 }
 
-.writing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+.entry-body h3 a {
+    color: inherit;
+    transition: color var(--transition-fast);
 }
 
-.writing-card {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.6rem;
-    position: relative;
+.entry-body h3 a::after {
+    content: '\2197';
+    font-size: 0.85em;
+    margin-left: 0.45em;
+    color: var(--text-tertiary);
+    transition: color var(--transition-fast);
 }
 
-.writing-card::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 32px;
-    height: 2px;
-    background: var(--brand-accent);
-    opacity: 0.55;
-}
-
-.wc-kicker {
-    font-size: 0.74rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+.entry-body h3 a:hover,
+.entry-body h3 a:hover::after {
     color: var(--brand-accent);
-    margin-bottom: 0.9rem;
 }
 
-.writing-card h3 {
-    font-size: 0.98rem;
-    font-weight: 600;
-    line-height: 1.75;
-    color: var(--text-primary);
-    margin-bottom: 0.7rem;
-}
-
-.writing-card>p {
-    font-size: 0.84rem;
+.entry-desc {
+    font-size: 0.87rem;
     line-height: 1.9;
     color: var(--text-secondary);
-    margin-bottom: 1.4rem;
-    flex-grow: 1;
 }
 
-.wc-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 1.2rem;
+.entry-parts {
+    list-style: none;
+    counter-reset: part;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 2rem;
+    margin-top: 1.1rem;
 }
 
-.wc-links a {
-    font-size: 0.82rem;
-    font-weight: 500;
+.entry-parts li {
+    counter-increment: part;
+    font-size: 0.84rem;
+    line-height: 1.8;
+}
+
+.entry-parts li::before {
+    content: '第' counter(part) '回';
+    font-size: 0.76rem;
+    color: var(--text-tertiary);
+    margin-right: 0.65em;
+    font-variant-numeric: tabular-nums;
+}
+
+.entry-parts a {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1px;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.entry-parts a:hover {
     color: var(--brand-accent);
-    border-bottom: 1px solid transparent;
-    transition: border-color var(--transition-fast);
+    border-bottom-color: var(--brand-accent);
 }
 
-.wc-links a:hover {
-    border-bottom-color: var(--brand-accent);
+.entry-repo {
+    margin-top: 1.35rem;
+}
+
+.entry-repo .text-link {
+    font-size: 0.84rem;
 }
 
 .writing-more {
@@ -1391,19 +1377,12 @@ footer {
     }
 
     .svc-grid,
-    .tech-highlights,
-    .writing-grid {
+    .tech-highlights {
         grid-template-columns: 1fr;
     }
 
     .tech-highlights {
         gap: 1.6rem;
-    }
-
-    .writing-grid {
-        max-width: 620px;
-        margin: 0 auto;
-        gap: 2rem;
     }
 
     .svc-steps,
@@ -1491,15 +1470,19 @@ footer {
         margin: 0.2rem 0 0;
     }
 
-    .news-item {
+    .entry-item {
         grid-template-columns: 1fr;
         gap: 0.4rem;
         padding: 1.5rem 0;
     }
 
-    .news-date {
+    .entry-date {
         padding-top: 0;
         font-size: 0.95rem;
+    }
+
+    .entry-parts {
+        grid-template-columns: 1fr;
     }
 
     .method-grid {
