@@ -405,16 +405,6 @@ nav a.nav-contact:hover {
     opacity: 0.88;
 }
 
-.btn-ghost {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: var(--text-on-dark);
-}
-
-.btn-ghost:hover {
-    border-color: rgba(255, 255, 255, 0.6);
-    color: #fff;
-}
-
 /* ---- Stats ---- */
 
 .stats {
@@ -559,7 +549,8 @@ main section {
 
 /* External variant: ↗ signals the link leaves this site */
 
-.text-link.external::after {
+.text-link.external::after,
+.btn-external::after {
     content: '\2197' / '';
 }
 
@@ -568,7 +559,6 @@ main section {
 }
 
 .btn-external::after {
-    content: '\2197' / '';
     margin-left: 0.6em;
     font-size: 0.95em;
     display: inline-block;
@@ -611,14 +601,6 @@ main section {
     color: var(--text-primary);
     padding-left: 1.4rem;
     border-left: 2px solid var(--brand-accent);
-}
-
-/* Soft bordered surface (Services cards) */
-
-.svc-card {
-    background: var(--bg-body);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
 }
 
 /* Left-ruled metric / step columns */
@@ -664,6 +646,9 @@ main section {
 }
 
 .svc-card {
+    background: var(--bg-body);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
     padding: 1.9rem 1.75rem;
 }
 
@@ -986,12 +971,6 @@ main section {
     box-shadow: var(--shadow-sm);
 }
 
-.product-block {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
 /* Centered column, left-aligned text — same rhythm as .svc-lead / .tech-intro */
 
 .product-info {
@@ -1011,7 +990,6 @@ main section {
     color: var(--text-secondary);
     font-size: 0.975rem;
     line-height: 1.9;
-    max-width: 680px;
 }
 
 .product-actions {
