@@ -1,24 +1,27 @@
-# ブランチの使い分け
+# Yozora Finance コーポレートサイト
 
-## mainブランチ　
--本番公開用  
--[cloudflareでmainブランチをデプロイ中](https://yozorafinance.com)  
--**動作確認済みの安定版のみ**をマージしてください  
+https://yozorafinance.com のソースです。フレームワークやビルド工程はなく、`index.html`・`style.css`・`main.js` と画像をそのまま配信しています。
 
-## devブランチ　 
--開発用  
--[github pagesで動作確認可能](https://reiminamoto.github.io/yozora-finance-website/)  
--**main にマージする前に、必ず dev ブランチ上での動作確認を行ってください！！！**  
+## 公開の仕組み
 
-# PR前に必ず行うこと
+- `main` ブランチが本番です。`main` にマージすると Cloudflare が自動でデプロイします。
+- `wrangler.jsonc` の `assets.directory` が `.` なので、リポジトリ直下のファイルがそのまま公開されます。
 
-他の変更と衝突しないよう、PRを出す前に以下の手順で `dev` ブランチを最新の `main` に同期してください。
+## 変更の手順
 
-```bash
-# mainブランチへ移動し、リモートの最新情報を取得
-git checkout main
-git pull origin main
+1. 最新の `main` から作業ブランチを切る。
 
-# devブランチへ戻って、mainの変更を取り込む
-git checkout dev
-git merge main
+   ```bash
+   git switch main
+   git pull --ff-only
+   git switch -c <作業ブランチ名>
+   ```
+
+2. 手元で表示を確認する。リポジトリ直下で次を実行し、http://localhost:8791 を開く。
+
+   ```bash
+   python3 -m http.server 8791
+   ```
+
+3. push して `main` 宛ての PR を出す。Cloudflare が PR のチェック欄にプレビュー URL を付けるので、そこでも表示を確認してからマージする。
+4. マージ後は作業ブランチを削除する。
