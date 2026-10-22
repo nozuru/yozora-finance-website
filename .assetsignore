@@ -1,0 +1,11 @@
+# サイトとして配信しないファイル(Cloudflare Workers の静的アセットから除外)
+.git
+.gitignore
+.assetsignore
+.claude
+.wrangler
+.dev.vars*
+.env*
+node_modules
+README.md
+wrangler.jsonc
